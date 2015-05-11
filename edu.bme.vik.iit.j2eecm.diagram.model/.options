@@ -1,0 +1,7 @@
+# Tracing options for the edu.bme.vik.iit.j2eecm.diagram.model plug-in
+
+# Common issues
+edu.bme.vik.iit.j2eecm.diagram.model/debug=false
+
+# Visual IDs
+edu.bme.vik.iit.j2eecm.diagram.model/debug/visualID=false

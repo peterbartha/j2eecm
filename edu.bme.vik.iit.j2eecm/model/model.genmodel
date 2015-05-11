@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.bme.vik.iit.j2eecm/src" modelPluginID="edu.bme.vik.iit.j2eecm"
+    modelName="Model" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>model.ecore</foreignModel>
+  <genPackages prefix="Components" disposableProviderFactory="true" ecorePackage="model.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//VisibilityKind">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//VisibilityKind/public"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//VisibilityKind/private"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//VisibilityKind/protected"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//VisibilityKind/package"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//ViewTypeKind">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ViewTypeKind/local"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//ViewTypeKind/remote"/>
+    </genEnums>
+    <genClasses ecoreClass="model.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Model/client"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Model/server"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Model/database"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Model/webRealtion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Model/dataRelation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Model/appRelation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Model/containerRelation"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Client">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Client/application"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Client/browser"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Client/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Client/os"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//J2EEServer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//J2EEServer/ejbContainer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//J2EEServer/webContainer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//J2EEServer/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//J2EEServer/os"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Database">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Database/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Database/os"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Database/databaseEngine"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Browser">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Browser/name"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//ApplicationClient">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ApplicationClient/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ApplicationClient/language"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//WebContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//WebContainer/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//WebContainer/serverApp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//WebContainer/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//EJBContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//EJBContainer/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//EJBContainer/generalizationRelationship"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//EJBContainer/namedElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//EJBContainer/classifiers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//EJBContainer/relizationRelationship"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//EJBContainer/associations"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//EJB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//EJB/viewType"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//EntityBean"/>
+    <genClasses image="false" ecoreClass="model.ecore#//SessionBean"/>
+    <genClasses ecoreClass="model.ecore#//MessageDrivenBean"/>
+    <genClasses ecoreClass="model.ecore#//StatelessSessionBean"/>
+    <genClasses ecoreClass="model.ecore#//StatefulSessionBean"/>
+    <genClasses ecoreClass="model.ecore#//Servlet"/>
+    <genClasses ecoreClass="model.ecore#//JSPPage"/>
+    <genClasses ecoreClass="model.ecore#//ContainerReleationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ContainerReleationship/ejbs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ContainerReleationship/web"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ContainerReleationship/protocol"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//WebReleationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//WebReleationship/protocol"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//WebReleationship/browser"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//WebReleationship/webContainer"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//AppReleationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//AppReleationship/app"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//AppReleationship/ejbs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AppReleationship/protocol"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//DataReleationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//DataReleationship/server"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//DataReleationship/database"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//DataReleationship/protocol"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//ClassElement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ClassElement/superClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//ClassElement/isABstract"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//Classifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Classifier/namespace"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Operation/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Operation/opeartionType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//Type"/>
+    <genClasses ecoreClass="model.ecore#//Property">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Property/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Property/propertyType"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Association">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Association/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Association/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Association/lowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Association/upperBound"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//PackageElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//PackageElement/packagedAssociation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//PackageElement/packagedElement"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Generalization">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Generalization/general"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Generalization/specific"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//PackageableElement"/>
+    <genClasses image="false" ecoreClass="model.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NamedElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//NamedElement/visibility"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//webModelRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//webModelRelationship/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//webModelRelationship/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//webModelRelationship/label"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//WebContainerElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//WebContainerElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//InterfaceElement"/>
+    <genClasses ecoreClass="model.ecore#//Aggregation"/>
+    <genClasses ecoreClass="model.ecore#//Realization">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Realization/interfaceElem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Realization/classElem"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//ClassifierElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//ClassifierElement/ownedOperation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//ClassifierElement/ownedProperty"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
