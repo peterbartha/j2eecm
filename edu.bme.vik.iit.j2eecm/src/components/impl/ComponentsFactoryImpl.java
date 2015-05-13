@@ -85,6 +85,21 @@ public class ComponentsFactoryImpl extends EFactoryImpl implements ComponentsFac
 			case ComponentsPackage.INTERFACE_ELEMENT: return createInterfaceElement();
 			case ComponentsPackage.AGGREGATION: return createAggregation();
 			case ComponentsPackage.REALIZATION: return createRealization();
+			case ComponentsPackage.STRUTS: return createStruts();
+			case ComponentsPackage.STRUTS_GLOBAL: return createStrutsGlobal();
+			case ComponentsPackage.ACTION_RELATIONSHIP: return createActionRelationship();
+			case ComponentsPackage.STRUTS_RELATION: return createStrutsRelation();
+			case ComponentsPackage.XML_CONFIG: return createXMLConfig();
+			case ComponentsPackage.STRUTS_OPERATION: return createStrutsOperation();
+			case ComponentsPackage.EXCEPTION_HANDLING: return createExceptionHandling();
+			case ComponentsPackage.EVENT_CALL: return createEventCall();
+			case ComponentsPackage.ENUM_ELEMENT: return createEnumElement();
+			case ComponentsPackage.ENUM_LITERAL: return createEnumLiteral();
+			case ComponentsPackage.HTML5: return createHTML5();
+			case ComponentsPackage.STATIC_RELATIONSHIP: return createstaticRelationship();
+			case ComponentsPackage.LINK_ELEMENT: return createLinkElement();
+			case ComponentsPackage.LINK_RELATIONSHIP: return createlinkRelationship();
+			case ComponentsPackage.STRUTS_LINK_RELATION: return createstrutsLinkRelation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -402,6 +417,156 @@ public class ComponentsFactoryImpl extends EFactoryImpl implements ComponentsFac
 	public Realization createRealization() {
 		RealizationImpl realization = new RealizationImpl();
 		return realization;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Struts createStruts() {
+		StrutsImpl struts = new StrutsImpl();
+		return struts;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StrutsGlobal createStrutsGlobal() {
+		StrutsGlobalImpl strutsGlobal = new StrutsGlobalImpl();
+		return strutsGlobal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ActionRelationship createActionRelationship() {
+		ActionRelationshipImpl actionRelationship = new ActionRelationshipImpl();
+		return actionRelationship;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StrutsRelation createStrutsRelation() {
+		StrutsRelationImpl strutsRelation = new StrutsRelationImpl();
+		return strutsRelation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public XMLConfig createXMLConfig() {
+		XMLConfigImpl xmlConfig = new XMLConfigImpl();
+		return xmlConfig;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StrutsOperation createStrutsOperation() {
+		StrutsOperationImpl strutsOperation = new StrutsOperationImpl();
+		return strutsOperation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExceptionHandling createExceptionHandling() {
+		ExceptionHandlingImpl exceptionHandling = new ExceptionHandlingImpl();
+		return exceptionHandling;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EventCall createEventCall() {
+		EventCallImpl eventCall = new EventCallImpl();
+		return eventCall;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EnumElement createEnumElement() {
+		EnumElementImpl enumElement = new EnumElementImpl();
+		return enumElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EnumLiteral createEnumLiteral() {
+		EnumLiteralImpl enumLiteral = new EnumLiteralImpl();
+		return enumLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HTML5 createHTML5() {
+		HTML5Impl html5 = new HTML5Impl();
+		return html5;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public staticRelationship createstaticRelationship() {
+		staticRelationshipImpl staticRelationship = new staticRelationshipImpl();
+		return staticRelationship;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LinkElement createLinkElement() {
+		LinkElementImpl linkElement = new LinkElementImpl();
+		return linkElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public linkRelationship createlinkRelationship() {
+		linkRelationshipImpl linkRelationship = new linkRelationshipImpl();
+		return linkRelationship;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public strutsLinkRelation createstrutsLinkRelation() {
+		strutsLinkRelationImpl strutsLinkRelation = new strutsLinkRelationImpl();
+		return strutsLinkRelation;
 	}
 
 	/**

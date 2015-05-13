@@ -274,6 +274,141 @@ public interface ComponentsFactory extends EFactory {
 	Realization createRealization();
 
 	/**
+	 * Returns a new object of class '<em>Struts</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Struts</em>'.
+	 * @generated
+	 */
+	Struts createStruts();
+
+	/**
+	 * Returns a new object of class '<em>Struts Global</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Struts Global</em>'.
+	 * @generated
+	 */
+	StrutsGlobal createStrutsGlobal();
+
+	/**
+	 * Returns a new object of class '<em>Action Relationship</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Action Relationship</em>'.
+	 * @generated
+	 */
+	ActionRelationship createActionRelationship();
+
+	/**
+	 * Returns a new object of class '<em>Struts Relation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Struts Relation</em>'.
+	 * @generated
+	 */
+	StrutsRelation createStrutsRelation();
+
+	/**
+	 * Returns a new object of class '<em>XML Config</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>XML Config</em>'.
+	 * @generated
+	 */
+	XMLConfig createXMLConfig();
+
+	/**
+	 * Returns a new object of class '<em>Struts Operation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Struts Operation</em>'.
+	 * @generated
+	 */
+	StrutsOperation createStrutsOperation();
+
+	/**
+	 * Returns a new object of class '<em>Exception Handling</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Exception Handling</em>'.
+	 * @generated
+	 */
+	ExceptionHandling createExceptionHandling();
+
+	/**
+	 * Returns a new object of class '<em>Event Call</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Event Call</em>'.
+	 * @generated
+	 */
+	EventCall createEventCall();
+
+	/**
+	 * Returns a new object of class '<em>Enum Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Enum Element</em>'.
+	 * @generated
+	 */
+	EnumElement createEnumElement();
+
+	/**
+	 * Returns a new object of class '<em>Enum Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Enum Literal</em>'.
+	 * @generated
+	 */
+	EnumLiteral createEnumLiteral();
+
+	/**
+	 * Returns a new object of class '<em>HTML5</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>HTML5</em>'.
+	 * @generated
+	 */
+	HTML5 createHTML5();
+
+	/**
+	 * Returns a new object of class '<em>static Relationship</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>static Relationship</em>'.
+	 * @generated
+	 */
+	staticRelationship createstaticRelationship();
+
+	/**
+	 * Returns a new object of class '<em>Link Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Link Element</em>'.
+	 * @generated
+	 */
+	LinkElement createLinkElement();
+
+	/**
+	 * Returns a new object of class '<em>link Relationship</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>link Relationship</em>'.
+	 * @generated
+	 */
+	linkRelationship createlinkRelationship();
+
+	/**
+	 * Returns a new object of class '<em>struts Link Relation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>struts Link Relation</em>'.
+	 * @generated
+	 */
+	strutsLinkRelation createstrutsLinkRelation();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

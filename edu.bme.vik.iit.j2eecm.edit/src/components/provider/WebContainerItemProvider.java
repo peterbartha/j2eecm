@@ -126,6 +126,12 @@ public class WebContainerItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ComponentsPackage.Literals.WEB_CONTAINER__ELEMENTS);
+			childrenFeatures.add(ComponentsPackage.Literals.WEB_CONTAINER__STRUTS);
+			childrenFeatures.add(ComponentsPackage.Literals.WEB_CONTAINER__STATIC_ELEMENTS);
+			childrenFeatures.add(ComponentsPackage.Literals.WEB_CONTAINER__STRUTS_ACTIONS);
+			childrenFeatures.add(ComponentsPackage.Literals.WEB_CONTAINER__WEBRELATIONS);
+			childrenFeatures.add(ComponentsPackage.Literals.WEB_CONTAINER__LINK_ELEMENTS);
+			childrenFeatures.add(ComponentsPackage.Literals.WEB_CONTAINER__GLOBAL);
 		}
 		return childrenFeatures;
 	}
@@ -185,6 +191,12 @@ public class WebContainerItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ComponentsPackage.WEB_CONTAINER__ELEMENTS:
+			case ComponentsPackage.WEB_CONTAINER__STRUTS:
+			case ComponentsPackage.WEB_CONTAINER__STATIC_ELEMENTS:
+			case ComponentsPackage.WEB_CONTAINER__STRUTS_ACTIONS:
+			case ComponentsPackage.WEB_CONTAINER__WEBRELATIONS:
+			case ComponentsPackage.WEB_CONTAINER__LINK_ELEMENTS:
+			case ComponentsPackage.WEB_CONTAINER__GLOBAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -211,6 +223,76 @@ public class WebContainerItemProvider
 			(createChildParameter
 				(ComponentsPackage.Literals.WEB_CONTAINER__ELEMENTS,
 				 ComponentsFactory.eINSTANCE.createJSPPage()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__STRUTS,
+				 ComponentsFactory.eINSTANCE.createStruts()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__STATIC_ELEMENTS,
+				 ComponentsFactory.eINSTANCE.createXMLConfig()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__STATIC_ELEMENTS,
+				 ComponentsFactory.eINSTANCE.createHTML5()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__STRUTS_ACTIONS,
+				 ComponentsFactory.eINSTANCE.createStrutsOperation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__STRUTS_ACTIONS,
+				 ComponentsFactory.eINSTANCE.createExceptionHandling()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__STRUTS_ACTIONS,
+				 ComponentsFactory.eINSTANCE.createEventCall()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__WEBRELATIONS,
+				 ComponentsFactory.eINSTANCE.createwebModelRelationship()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__WEBRELATIONS,
+				 ComponentsFactory.eINSTANCE.createActionRelationship()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__WEBRELATIONS,
+				 ComponentsFactory.eINSTANCE.createStrutsRelation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__WEBRELATIONS,
+				 ComponentsFactory.eINSTANCE.createstaticRelationship()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__WEBRELATIONS,
+				 ComponentsFactory.eINSTANCE.createlinkRelationship()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__WEBRELATIONS,
+				 ComponentsFactory.eINSTANCE.createstrutsLinkRelation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__LINK_ELEMENTS,
+				 ComponentsFactory.eINSTANCE.createLinkElement()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.WEB_CONTAINER__GLOBAL,
+				 ComponentsFactory.eINSTANCE.createStrutsGlobal()));
 	}
 
 	/**

@@ -2,6 +2,8 @@
  */
 package components.impl;
 
+import components.Action;
+import components.ActionRelationship;
 import components.Aggregation;
 import components.AppReleationship;
 import components.ApplicationClient;
@@ -18,10 +20,15 @@ import components.DataReleationship;
 import components.Database;
 import components.EJBContainer;
 import components.EntityBean;
+import components.EnumElement;
+import components.EnumLiteral;
+import components.EventCall;
+import components.ExceptionHandling;
 import components.Generalization;
 import components.InterfaceElement;
 import components.J2EEServer;
 import components.JSPPage;
+import components.LinkElement;
 import components.MessageDrivenBean;
 import components.Model;
 import components.NamedElement;
@@ -34,12 +41,22 @@ import components.Servlet;
 import components.SessionBean;
 import components.StatefulSessionBean;
 import components.StatelessSessionBean;
+import components.StaticWebElement;
+import components.Struts;
+import components.StrutsGlobal;
+import components.StrutsOperation;
+import components.StrutsRelation;
 import components.Type;
 import components.ViewTypeKind;
 import components.VisibilityKind;
 import components.WebContainer;
 import components.WebContainerElement;
+import components.WebContainerRelations;
 import components.WebReleationship;
+import components.XMLConfig;
+import components.linkRelationship;
+import components.staticRelationship;
+import components.strutsLinkRelation;
 import components.webModelRelationship;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -308,6 +325,132 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 * @generated
 	 */
 	private EClass classifierElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strutsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strutsGlobalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass actionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass actionRelationshipEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strutsRelationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass xmlConfigEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strutsOperationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass exceptionHandlingEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eventCallEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass enumElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass enumLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass html5EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass staticWebElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass staticRelationshipEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass linkElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass linkRelationshipEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strutsLinkRelationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass webContainerRelationsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -668,6 +811,60 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getWebContainer_Struts() {
+		return (EReference)webContainerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWebContainer_StaticElements() {
+		return (EReference)webContainerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWebContainer_StrutsActions() {
+		return (EReference)webContainerEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWebContainer_Webrelations() {
+		return (EReference)webContainerEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWebContainer_LinkElements() {
+		return (EReference)webContainerEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWebContainer_Global() {
+		return (EReference)webContainerEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEJBContainer() {
 		return ejbContainerEClass;
 	}
@@ -724,6 +921,15 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 */
 	public EReference getEJBContainer_Associations() {
 		return (EReference)ejbContainerEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEJBContainer_Enums() {
+		return (EReference)ejbContainerEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -805,6 +1011,15 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 */
 	public EClass getJSPPage() {
 		return jspPageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getJSPPage_Links() {
+		return (EReference)jspPageEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1325,6 +1540,330 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getStruts() {
+		return strutsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStruts_Actions() {
+		return (EReference)strutsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStruts_Name() {
+		return (EAttribute)strutsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStrutsGlobal() {
+		return strutsGlobalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStrutsGlobal_Actions() {
+		return (EReference)strutsGlobalEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAction() {
+		return actionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAction_Name() {
+		return (EAttribute)actionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getActionRelationship() {
+		return actionRelationshipEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActionRelationship_ActionElem() {
+		return (EReference)actionRelationshipEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getActionRelationship_PageElem() {
+		return (EReference)actionRelationshipEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStrutsRelation() {
+		return strutsRelationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStrutsRelation_Target() {
+		return (EReference)strutsRelationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStrutsRelation_Source() {
+		return (EReference)strutsRelationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getXMLConfig() {
+		return xmlConfigEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStrutsOperation() {
+		return strutsOperationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExceptionHandling() {
+		return exceptionHandlingEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEventCall() {
+		return eventCallEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEnumElement() {
+		return enumElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEnumElement_Literals() {
+		return (EReference)enumElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEnumLiteral() {
+		return enumLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEnumLiteral_Name() {
+		return (EAttribute)enumLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHTML5() {
+		return html5EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStaticWebElement() {
+		return staticWebElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStaticWebElement_Name() {
+		return (EAttribute)staticWebElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getstaticRelationship() {
+		return staticRelationshipEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getstaticRelationship_Target() {
+		return (EReference)staticRelationshipEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getstaticRelationship_Source() {
+		return (EReference)staticRelationshipEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLinkElement() {
+		return linkElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLinkElement_Link() {
+		return (EAttribute)linkElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getlinkRelationship() {
+		return linkRelationshipEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getlinkRelationship_Source() {
+		return (EReference)linkRelationshipEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getlinkRelationship_Target() {
+		return (EReference)linkRelationshipEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getstrutsLinkRelation() {
+		return strutsLinkRelationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getstrutsLinkRelation_Source() {
+		return (EReference)strutsLinkRelationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getstrutsLinkRelation_Target() {
+		return (EReference)strutsLinkRelationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWebContainerRelations() {
+		return webContainerRelationsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVisibilityKind() {
 		return visibilityKindEEnum;
 	}
@@ -1403,6 +1942,12 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		createEAttribute(webContainerEClass, WEB_CONTAINER__NAME);
 		createEAttribute(webContainerEClass, WEB_CONTAINER__SERVER_APP);
 		createEReference(webContainerEClass, WEB_CONTAINER__ELEMENTS);
+		createEReference(webContainerEClass, WEB_CONTAINER__STRUTS);
+		createEReference(webContainerEClass, WEB_CONTAINER__STATIC_ELEMENTS);
+		createEReference(webContainerEClass, WEB_CONTAINER__STRUTS_ACTIONS);
+		createEReference(webContainerEClass, WEB_CONTAINER__WEBRELATIONS);
+		createEReference(webContainerEClass, WEB_CONTAINER__LINK_ELEMENTS);
+		createEReference(webContainerEClass, WEB_CONTAINER__GLOBAL);
 
 		ejbContainerEClass = createEClass(EJB_CONTAINER);
 		createEAttribute(ejbContainerEClass, EJB_CONTAINER__NAME);
@@ -1411,6 +1956,7 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		createEReference(ejbContainerEClass, EJB_CONTAINER__CLASSIFIERS);
 		createEReference(ejbContainerEClass, EJB_CONTAINER__RELIZATION_RELATIONSHIP);
 		createEReference(ejbContainerEClass, EJB_CONTAINER__ASSOCIATIONS);
+		createEReference(ejbContainerEClass, EJB_CONTAINER__ENUMS);
 
 		ejbEClass = createEClass(EJB);
 		createEAttribute(ejbEClass, EJB__VIEW_TYPE);
@@ -1428,6 +1974,7 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		servletEClass = createEClass(SERVLET);
 
 		jspPageEClass = createEClass(JSP_PAGE);
+		createEReference(jspPageEClass, JSP_PAGE__LINKS);
 
 		containerReleationshipEClass = createEClass(CONTAINER_RELEATIONSHIP);
 		createEReference(containerReleationshipEClass, CONTAINER_RELEATIONSHIP__EJBS);
@@ -1506,6 +2053,60 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		createEReference(classifierElementEClass, CLASSIFIER_ELEMENT__OWNED_OPERATION);
 		createEReference(classifierElementEClass, CLASSIFIER_ELEMENT__OWNED_PROPERTY);
 
+		strutsEClass = createEClass(STRUTS);
+		createEReference(strutsEClass, STRUTS__ACTIONS);
+		createEAttribute(strutsEClass, STRUTS__NAME);
+
+		strutsGlobalEClass = createEClass(STRUTS_GLOBAL);
+		createEReference(strutsGlobalEClass, STRUTS_GLOBAL__ACTIONS);
+
+		actionEClass = createEClass(ACTION);
+		createEAttribute(actionEClass, ACTION__NAME);
+
+		actionRelationshipEClass = createEClass(ACTION_RELATIONSHIP);
+		createEReference(actionRelationshipEClass, ACTION_RELATIONSHIP__ACTION_ELEM);
+		createEReference(actionRelationshipEClass, ACTION_RELATIONSHIP__PAGE_ELEM);
+
+		strutsRelationEClass = createEClass(STRUTS_RELATION);
+		createEReference(strutsRelationEClass, STRUTS_RELATION__TARGET);
+		createEReference(strutsRelationEClass, STRUTS_RELATION__SOURCE);
+
+		xmlConfigEClass = createEClass(XML_CONFIG);
+
+		strutsOperationEClass = createEClass(STRUTS_OPERATION);
+
+		exceptionHandlingEClass = createEClass(EXCEPTION_HANDLING);
+
+		eventCallEClass = createEClass(EVENT_CALL);
+
+		enumElementEClass = createEClass(ENUM_ELEMENT);
+		createEReference(enumElementEClass, ENUM_ELEMENT__LITERALS);
+
+		enumLiteralEClass = createEClass(ENUM_LITERAL);
+		createEAttribute(enumLiteralEClass, ENUM_LITERAL__NAME);
+
+		html5EClass = createEClass(HTML5);
+
+		staticWebElementEClass = createEClass(STATIC_WEB_ELEMENT);
+		createEAttribute(staticWebElementEClass, STATIC_WEB_ELEMENT__NAME);
+
+		staticRelationshipEClass = createEClass(STATIC_RELATIONSHIP);
+		createEReference(staticRelationshipEClass, STATIC_RELATIONSHIP__TARGET);
+		createEReference(staticRelationshipEClass, STATIC_RELATIONSHIP__SOURCE);
+
+		linkElementEClass = createEClass(LINK_ELEMENT);
+		createEAttribute(linkElementEClass, LINK_ELEMENT__LINK);
+
+		linkRelationshipEClass = createEClass(LINK_RELATIONSHIP);
+		createEReference(linkRelationshipEClass, LINK_RELATIONSHIP__SOURCE);
+		createEReference(linkRelationshipEClass, LINK_RELATIONSHIP__TARGET);
+
+		strutsLinkRelationEClass = createEClass(STRUTS_LINK_RELATION);
+		createEReference(strutsLinkRelationEClass, STRUTS_LINK_RELATION__SOURCE);
+		createEReference(strutsLinkRelationEClass, STRUTS_LINK_RELATION__TARGET);
+
+		webContainerRelationsEClass = createEClass(WEB_CONTAINER_RELATIONS);
+
 		// Create enums
 		visibilityKindEEnum = createEEnum(VISIBILITY_KIND);
 		viewTypeKindEEnum = createEEnum(VIEW_TYPE_KIND);
@@ -1556,9 +2157,21 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		packageElementEClass.getESuperTypes().add(this.getClassifier());
 		packageElementEClass.getESuperTypes().add(this.getPackageableElement());
 		packageableElementEClass.getESuperTypes().add(this.getNamedElement());
+		webModelRelationshipEClass.getESuperTypes().add(this.getWebContainerRelations());
 		interfaceElementEClass.getESuperTypes().add(this.getClassifierElement());
 		aggregationEClass.getESuperTypes().add(this.getAssociation());
 		classifierElementEClass.getESuperTypes().add(this.getClassifier());
+		actionRelationshipEClass.getESuperTypes().add(this.getWebContainerRelations());
+		strutsRelationEClass.getESuperTypes().add(this.getWebContainerRelations());
+		xmlConfigEClass.getESuperTypes().add(this.getStaticWebElement());
+		strutsOperationEClass.getESuperTypes().add(this.getAction());
+		exceptionHandlingEClass.getESuperTypes().add(this.getAction());
+		eventCallEClass.getESuperTypes().add(this.getAction());
+		enumElementEClass.getESuperTypes().add(this.getPackageableElement());
+		html5EClass.getESuperTypes().add(this.getStaticWebElement());
+		staticRelationshipEClass.getESuperTypes().add(this.getWebContainerRelations());
+		linkRelationshipEClass.getESuperTypes().add(this.getWebContainerRelations());
+		strutsLinkRelationEClass.getESuperTypes().add(this.getWebContainerRelations());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1598,6 +2211,12 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		initEAttribute(getWebContainer_Name(), ecorePackage.getEString(), "name", null, 0, 1, WebContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWebContainer_ServerApp(), ecorePackage.getEString(), "serverApp", null, 0, 1, WebContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWebContainer_Elements(), this.getWebContainerElement(), null, "elements", null, 0, -1, WebContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWebContainer_Struts(), this.getStruts(), null, "struts", null, 0, -1, WebContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWebContainer_StaticElements(), this.getStaticWebElement(), null, "staticElements", null, 0, -1, WebContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWebContainer_StrutsActions(), this.getAction(), null, "strutsActions", null, 0, -1, WebContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWebContainer_Webrelations(), this.getWebContainerRelations(), null, "webrelations", null, 0, -1, WebContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWebContainer_LinkElements(), this.getLinkElement(), null, "linkElements", null, 0, -1, WebContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWebContainer_Global(), this.getStrutsGlobal(), null, "global", null, 0, 1, WebContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ejbContainerEClass, EJBContainer.class, "EJBContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEJBContainer_Name(), ecorePackage.getEString(), "name", null, 0, 1, EJBContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1606,6 +2225,7 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		initEReference(getEJBContainer_Classifiers(), this.getClassifier(), null, "classifiers", null, 0, -1, EJBContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEJBContainer_RelizationRelationship(), this.getRealization(), null, "relizationRelationship", null, 0, -1, EJBContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEJBContainer_Associations(), this.getAssociation(), null, "associations", null, 0, -1, EJBContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEJBContainer_Enums(), this.getEnumElement(), null, "enums", null, 0, -1, EJBContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ejbEClass, components.EJB.class, "EJB", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEJB_ViewType(), this.getViewTypeKind(), "viewType", null, 0, 1, components.EJB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1623,6 +2243,7 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		initEClass(servletEClass, Servlet.class, "Servlet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(jspPageEClass, JSPPage.class, "JSPPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getJSPPage_Links(), this.getLinkElement(), null, "links", null, 0, -1, JSPPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(containerReleationshipEClass, ContainerReleationship.class, "ContainerReleationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getContainerReleationship_Ejbs(), this.getEJBContainer(), null, "ejbs", null, 1, 1, ContainerReleationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1700,6 +2321,60 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		initEClass(classifierElementEClass, ClassifierElement.class, "ClassifierElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getClassifierElement_OwnedOperation(), this.getOperation(), null, "ownedOperation", null, 0, -1, ClassifierElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClassifierElement_OwnedProperty(), this.getProperty(), null, "ownedProperty", null, 0, -1, ClassifierElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(strutsEClass, Struts.class, "Struts", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStruts_Actions(), this.getAction(), null, "actions", null, 0, -1, Struts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStruts_Name(), ecorePackage.getEString(), "name", null, 0, 1, Struts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(strutsGlobalEClass, StrutsGlobal.class, "StrutsGlobal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStrutsGlobal_Actions(), this.getAction(), null, "actions", null, 0, -1, StrutsGlobal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(actionEClass, Action.class, "Action", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(actionRelationshipEClass, ActionRelationship.class, "ActionRelationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getActionRelationship_ActionElem(), this.getAction(), null, "actionElem", null, 1, 1, ActionRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActionRelationship_PageElem(), this.getJSPPage(), null, "pageElem", null, 1, 1, ActionRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(strutsRelationEClass, StrutsRelation.class, "StrutsRelation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStrutsRelation_Target(), this.getStruts(), null, "target", null, 1, 1, StrutsRelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStrutsRelation_Source(), this.getAction(), null, "source", null, 1, 1, StrutsRelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(xmlConfigEClass, XMLConfig.class, "XMLConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(strutsOperationEClass, StrutsOperation.class, "StrutsOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(exceptionHandlingEClass, ExceptionHandling.class, "ExceptionHandling", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eventCallEClass, EventCall.class, "EventCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(enumElementEClass, EnumElement.class, "EnumElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEnumElement_Literals(), this.getEnumLiteral(), null, "literals", null, 0, -1, EnumElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(enumLiteralEClass, EnumLiteral.class, "EnumLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEnumLiteral_Name(), ecorePackage.getEString(), "name", null, 0, 1, EnumLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(html5EClass, components.HTML5.class, "HTML5", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(staticWebElementEClass, StaticWebElement.class, "StaticWebElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStaticWebElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, StaticWebElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(staticRelationshipEClass, staticRelationship.class, "staticRelationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getstaticRelationship_Target(), this.getStaticWebElement(), null, "target", null, 1, 1, staticRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getstaticRelationship_Source(), this.getWebContainerElement(), null, "source", null, 1, 1, staticRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(linkElementEClass, LinkElement.class, "LinkElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLinkElement_Link(), ecorePackage.getEString(), "link", null, 0, 1, LinkElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(linkRelationshipEClass, linkRelationship.class, "linkRelationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getlinkRelationship_Source(), this.getLinkElement(), null, "source", null, 1, 1, linkRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getlinkRelationship_Target(), this.getJSPPage(), null, "target", null, 1, 1, linkRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(strutsLinkRelationEClass, strutsLinkRelation.class, "strutsLinkRelation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getstrutsLinkRelation_Source(), this.getLinkElement(), null, "source", null, 1, 1, strutsLinkRelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getstrutsLinkRelation_Target(), this.getStruts(), null, "target", null, 1, 1, strutsLinkRelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(webContainerRelationsEClass, WebContainerRelations.class, "WebContainerRelations", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(visibilityKindEEnum, VisibilityKind.class, "VisibilityKind");

@@ -103,6 +103,16 @@
         visualID="7006"
         queryText="true"/>
   </nodeTraces>
+  <nodeTraces
+      visualID="2013"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'components' and _eClass_.name = 'EnumElement') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'components' and _eClass_.name = 'EJBContainer') and _containmentMF_.name = 'enums')">
+    <nodeLabelTraces
+        visualID="5033"
+        queryText="true"/>
+    <compartmentTraces
+        visualID="7016"
+        queryText="true"/>
+  </nodeTraces>
   <childNodeTraces
       visualID="3003"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'components' and _eClass_.name = 'Property') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'components' and _eClass_.name = 'ClassifierElement') and _containmentMF_.name = 'ownedProperty')">
@@ -212,6 +222,13 @@
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'components' and _eClass_.name = 'Operation') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'components' and _eClass_.name = 'ClassifierElement') and _containmentMF_.name = 'ownedOperation')">
     <nodeLabelTraces
         visualID="5015"
+        queryText="true"/>
+  </childNodeTraces>
+  <childNodeTraces
+      visualID="3019"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'components' and _eClass_.name = 'EnumLiteral') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'components' and _eClass_.name = 'EnumElement') and _containmentMF_.name = 'literals')">
+    <nodeLabelTraces
+        visualID="5032"
         queryText="true"/>
   </childNodeTraces>
   <linkTraces

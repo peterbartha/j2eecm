@@ -50,6 +50,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="serverApp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//WebContainerElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="struts" upperBound="-1"
+        eType="#//Struts" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="staticElements" upperBound="-1"
+        eType="#//StaticWebElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="strutsActions" upperBound="-1"
+        eType="#//Action" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webrelations" upperBound="-1"
+        eType="#//WebContainerRelations" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkElements" upperBound="-1"
+        eType="#//LinkElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="global" eType="#//StrutsGlobal"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EJBContainer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -63,6 +75,8 @@
         upperBound="-1" eType="#//Realization" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="associations" upperBound="-1"
         eType="#//Association" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enums" upperBound="-1"
+        eType="#//EnumElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EJB" abstract="true" eSuperTypes="#//ClassElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="viewType" eType="#//ViewTypeKind"/>
@@ -73,7 +87,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="StatelessSessionBean" eSuperTypes="#//SessionBean"/>
   <eClassifiers xsi:type="ecore:EClass" name="StatefulSessionBean" eSuperTypes="#//SessionBean"/>
   <eClassifiers xsi:type="ecore:EClass" name="Servlet" eSuperTypes="#//WebContainerElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="JSPPage" eSuperTypes="#//WebContainerElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JSPPage" eSuperTypes="#//WebContainerElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//LinkElement" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContainerReleationship">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ejbs" lowerBound="1" eType="#//EJBContainer"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="web" lowerBound="1" eType="#//WebContainer"/>
@@ -149,7 +166,7 @@
     <eLiterals name="protected"/>
     <eLiterals name="package"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="webModelRelationship">
+  <eClassifiers xsi:type="ecore:EClass" name="webModelRelationship" eSuperTypes="#//WebContainerRelations">
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//WebContainerElement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
@@ -177,4 +194,65 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedProperty" upperBound="-1"
         eType="#//Property" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Struts">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
+        eType="#//Action" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StrutsGlobal">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" upperBound="-1"
+        eType="#//Action" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Action" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionRelationship" eSuperTypes="#//WebContainerRelations">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actionElem" lowerBound="1"
+        eType="#//Action"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pageElem" lowerBound="1"
+        eType="#//JSPPage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StrutsRelation" eSuperTypes="#//WebContainerRelations">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Struts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Action"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="XMLConfig" eSuperTypes="#//StaticWebElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StrutsOperation" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExceptionHandling" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventCall" eSuperTypes="#//Action"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumElement" eSuperTypes="#//PackageableElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="literals" upperBound="-1"
+        eType="#//EnumLiteral" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumLiteral">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HTML5" eSuperTypes="#//StaticWebElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StaticWebElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="staticRelationship" eSuperTypes="#//WebContainerRelations">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//StaticWebElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//WebContainerElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="linkRelationship" eSuperTypes="#//WebContainerRelations">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//LinkElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//JSPPage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="strutsLinkRelation" eSuperTypes="#//WebContainerRelations">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//LinkElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Struts"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebContainerRelations" abstract="true"/>
 </ecore:EPackage>

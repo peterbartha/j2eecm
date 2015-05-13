@@ -3,7 +3,8 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel">
+    xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel"
+    diagramFileExtension="jcm">
   <diagram
       visualID="1000"
       editPartClassName="ModelEditPart"
@@ -165,6 +166,11 @@
             width="120"
             height="100"/>
       </viewmap>
+      <behaviour
+          xsi:type="gmfgen:OpenDiagramBehaviour"
+          editPolicyClassName="OpenDiagramEditPolicyWeb"
+          diagramKind="WebContainer"
+          editorID="components.diagram.part.WebContainerDiagramEditorID"/>
       <modelFacet>
         <metaClass
             href="model.genmodel#//components/WebContainer"/>
@@ -235,6 +241,10 @@
             width="120"
             height="100"/>
       </viewmap>
+      <behaviour
+          xsi:type="gmfgen:OpenDiagramBehaviour"
+          diagramKind="EJBContainer"
+          editorID="components.diagram.part.EJBContainerDiagramEditorID"/>
       <modelFacet>
         <metaClass
             href="model.genmodel#//components/EJBContainer"/>

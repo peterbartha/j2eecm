@@ -716,6 +716,351 @@ public class ComponentsItemProviderAdapterFactory extends ComponentsAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link components.Struts} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StrutsItemProvider strutsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.Struts}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStrutsAdapter() {
+		if (strutsItemProvider == null) {
+			strutsItemProvider = new StrutsItemProvider(this);
+		}
+
+		return strutsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.StrutsGlobal} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StrutsGlobalItemProvider strutsGlobalItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.StrutsGlobal}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStrutsGlobalAdapter() {
+		if (strutsGlobalItemProvider == null) {
+			strutsGlobalItemProvider = new StrutsGlobalItemProvider(this);
+		}
+
+		return strutsGlobalItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.ActionRelationship} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ActionRelationshipItemProvider actionRelationshipItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.ActionRelationship}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createActionRelationshipAdapter() {
+		if (actionRelationshipItemProvider == null) {
+			actionRelationshipItemProvider = new ActionRelationshipItemProvider(this);
+		}
+
+		return actionRelationshipItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.StrutsRelation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StrutsRelationItemProvider strutsRelationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.StrutsRelation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStrutsRelationAdapter() {
+		if (strutsRelationItemProvider == null) {
+			strutsRelationItemProvider = new StrutsRelationItemProvider(this);
+		}
+
+		return strutsRelationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.XMLConfig} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected XMLConfigItemProvider xmlConfigItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.XMLConfig}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createXMLConfigAdapter() {
+		if (xmlConfigItemProvider == null) {
+			xmlConfigItemProvider = new XMLConfigItemProvider(this);
+		}
+
+		return xmlConfigItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.StrutsOperation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StrutsOperationItemProvider strutsOperationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.StrutsOperation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStrutsOperationAdapter() {
+		if (strutsOperationItemProvider == null) {
+			strutsOperationItemProvider = new StrutsOperationItemProvider(this);
+		}
+
+		return strutsOperationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.ExceptionHandling} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ExceptionHandlingItemProvider exceptionHandlingItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.ExceptionHandling}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExceptionHandlingAdapter() {
+		if (exceptionHandlingItemProvider == null) {
+			exceptionHandlingItemProvider = new ExceptionHandlingItemProvider(this);
+		}
+
+		return exceptionHandlingItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.EventCall} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EventCallItemProvider eventCallItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.EventCall}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEventCallAdapter() {
+		if (eventCallItemProvider == null) {
+			eventCallItemProvider = new EventCallItemProvider(this);
+		}
+
+		return eventCallItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.EnumElement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EnumElementItemProvider enumElementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.EnumElement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEnumElementAdapter() {
+		if (enumElementItemProvider == null) {
+			enumElementItemProvider = new EnumElementItemProvider(this);
+		}
+
+		return enumElementItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.EnumLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EnumLiteralItemProvider enumLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.EnumLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEnumLiteralAdapter() {
+		if (enumLiteralItemProvider == null) {
+			enumLiteralItemProvider = new EnumLiteralItemProvider(this);
+		}
+
+		return enumLiteralItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.HTML5} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HTML5ItemProvider html5ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.HTML5}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHTML5Adapter() {
+		if (html5ItemProvider == null) {
+			html5ItemProvider = new HTML5ItemProvider(this);
+		}
+
+		return html5ItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.staticRelationship} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected staticRelationshipItemProvider staticRelationshipItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.staticRelationship}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createstaticRelationshipAdapter() {
+		if (staticRelationshipItemProvider == null) {
+			staticRelationshipItemProvider = new staticRelationshipItemProvider(this);
+		}
+
+		return staticRelationshipItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.LinkElement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LinkElementItemProvider linkElementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.LinkElement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLinkElementAdapter() {
+		if (linkElementItemProvider == null) {
+			linkElementItemProvider = new LinkElementItemProvider(this);
+		}
+
+		return linkElementItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.linkRelationship} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected linkRelationshipItemProvider linkRelationshipItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.linkRelationship}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createlinkRelationshipAdapter() {
+		if (linkRelationshipItemProvider == null) {
+			linkRelationshipItemProvider = new linkRelationshipItemProvider(this);
+		}
+
+		return linkRelationshipItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link components.strutsLinkRelation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected strutsLinkRelationItemProvider strutsLinkRelationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link components.strutsLinkRelation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createstrutsLinkRelationAdapter() {
+		if (strutsLinkRelationItemProvider == null) {
+			strutsLinkRelationItemProvider = new strutsLinkRelationItemProvider(this);
+		}
+
+		return strutsLinkRelationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -842,6 +1187,21 @@ public class ComponentsItemProviderAdapterFactory extends ComponentsAdapterFacto
 		if (interfaceElementItemProvider != null) interfaceElementItemProvider.dispose();
 		if (aggregationItemProvider != null) aggregationItemProvider.dispose();
 		if (realizationItemProvider != null) realizationItemProvider.dispose();
+		if (strutsItemProvider != null) strutsItemProvider.dispose();
+		if (strutsGlobalItemProvider != null) strutsGlobalItemProvider.dispose();
+		if (actionRelationshipItemProvider != null) actionRelationshipItemProvider.dispose();
+		if (strutsRelationItemProvider != null) strutsRelationItemProvider.dispose();
+		if (xmlConfigItemProvider != null) xmlConfigItemProvider.dispose();
+		if (strutsOperationItemProvider != null) strutsOperationItemProvider.dispose();
+		if (exceptionHandlingItemProvider != null) exceptionHandlingItemProvider.dispose();
+		if (eventCallItemProvider != null) eventCallItemProvider.dispose();
+		if (enumElementItemProvider != null) enumElementItemProvider.dispose();
+		if (enumLiteralItemProvider != null) enumLiteralItemProvider.dispose();
+		if (html5ItemProvider != null) html5ItemProvider.dispose();
+		if (staticRelationshipItemProvider != null) staticRelationshipItemProvider.dispose();
+		if (linkElementItemProvider != null) linkElementItemProvider.dispose();
+		if (linkRelationshipItemProvider != null) linkRelationshipItemProvider.dispose();
+		if (strutsLinkRelationItemProvider != null) strutsLinkRelationItemProvider.dispose();
 	}
 
 }

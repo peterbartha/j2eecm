@@ -82,7 +82,7 @@ public class ModelNewDiagramFileWizard extends Wizard {
 		}
 		myFileCreationPage.setContainerFullPath(filePath);
 		myFileCreationPage.setFileName(ModelDiagramEditorUtil
-				.getUniqueFileName(filePath, fileName, "components_diagram")); //$NON-NLS-1$
+				.getUniqueFileName(filePath, fileName, "jcm")); //$NON-NLS-1$
 
 		diagramRootElementSelectionPage = new DiagramRootElementSelectionPage(
 				Messages.ModelNewDiagramFileWizard_RootSelectionPageName);

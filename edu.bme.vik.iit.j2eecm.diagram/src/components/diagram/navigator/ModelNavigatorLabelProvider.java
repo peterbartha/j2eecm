@@ -103,33 +103,12 @@ public class ModelNavigatorLabelProvider extends LabelProvider implements
 	 */
 	public Image getImage(View view) {
 		switch (ModelVisualIDRegistry.getVisualID(view)) {
-		case WebReleationshipEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?components?WebReleationship", ModelElementTypes.WebReleationship_4001); //$NON-NLS-1$
-		case J2EEServerEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?components?J2EEServer", ModelElementTypes.J2EEServer_2003); //$NON-NLS-1$
-		case DatabaseEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?components?Database", ModelElementTypes.Database_2002); //$NON-NLS-1$
-		case ClientEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?TopLevelNode?components?Client", ModelElementTypes.Client_2001); //$NON-NLS-1$
-		case EJBContainerEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?components?EJBContainer", ModelElementTypes.EJBContainer_3004); //$NON-NLS-1$
-		case WebContainerEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Node?components?WebContainer", ModelElementTypes.WebContainer_3003); //$NON-NLS-1$
-		case DataReleationshipEditPart.VISUAL_ID:
-			return getImage(
-					"Navigator?Link?components?DataReleationship", ModelElementTypes.DataReleationship_4002); //$NON-NLS-1$
 		case ContainerReleationshipEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?components?ContainerReleationship", ModelElementTypes.ContainerReleationship_4004); //$NON-NLS-1$
-		case BrowserEditPart.VISUAL_ID:
+		case ClientEditPart.VISUAL_ID:
 			return getImage(
-					"Navigator?Node?components?Browser", ModelElementTypes.Browser_3001); //$NON-NLS-1$
+					"Navigator?TopLevelNode?components?Client", ModelElementTypes.Client_2001); //$NON-NLS-1$
 		case ApplicationClientEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Node?components?ApplicationClient", ModelElementTypes.ApplicationClient_3002); //$NON-NLS-1$
@@ -139,6 +118,27 @@ public class ModelNavigatorLabelProvider extends LabelProvider implements
 		case AppReleationshipEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?components?AppReleationship", ModelElementTypes.AppReleationship_4003); //$NON-NLS-1$
+		case J2EEServerEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?components?J2EEServer", ModelElementTypes.J2EEServer_2003); //$NON-NLS-1$
+		case WebReleationshipEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?components?WebReleationship", ModelElementTypes.WebReleationship_4001); //$NON-NLS-1$
+		case EJBContainerEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?components?EJBContainer", ModelElementTypes.EJBContainer_3004); //$NON-NLS-1$
+		case WebContainerEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?components?WebContainer", ModelElementTypes.WebContainer_3003); //$NON-NLS-1$
+		case DatabaseEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?TopLevelNode?components?Database", ModelElementTypes.Database_2002); //$NON-NLS-1$
+		case BrowserEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?components?Browser", ModelElementTypes.Browser_3001); //$NON-NLS-1$
+		case DataReleationshipEditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?components?DataReleationship", ModelElementTypes.DataReleationship_4002); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -191,32 +191,72 @@ public class ModelNavigatorLabelProvider extends LabelProvider implements
 			return getUnresolvedDomainElementProxyText(view);
 		}
 		switch (ModelVisualIDRegistry.getVisualID(view)) {
-		case WebReleationshipEditPart.VISUAL_ID:
-			return getWebReleationship_4001Text(view);
-		case J2EEServerEditPart.VISUAL_ID:
-			return getJ2EEServer_2003Text(view);
-		case DatabaseEditPart.VISUAL_ID:
-			return getDatabase_2002Text(view);
-		case ClientEditPart.VISUAL_ID:
-			return getClient_2001Text(view);
-		case EJBContainerEditPart.VISUAL_ID:
-			return getEJBContainer_3004Text(view);
-		case WebContainerEditPart.VISUAL_ID:
-			return getWebContainer_3003Text(view);
-		case DataReleationshipEditPart.VISUAL_ID:
-			return getDataReleationship_4002Text(view);
 		case ContainerReleationshipEditPart.VISUAL_ID:
 			return getContainerReleationship_4004Text(view);
-		case BrowserEditPart.VISUAL_ID:
-			return getBrowser_3001Text(view);
+		case ClientEditPart.VISUAL_ID:
+			return getClient_2001Text(view);
 		case ApplicationClientEditPart.VISUAL_ID:
 			return getApplicationClient_3002Text(view);
 		case ModelEditPart.VISUAL_ID:
 			return getModel_1000Text(view);
 		case AppReleationshipEditPart.VISUAL_ID:
 			return getAppReleationship_4003Text(view);
+		case J2EEServerEditPart.VISUAL_ID:
+			return getJ2EEServer_2003Text(view);
+		case WebReleationshipEditPart.VISUAL_ID:
+			return getWebReleationship_4001Text(view);
+		case EJBContainerEditPart.VISUAL_ID:
+			return getEJBContainer_3004Text(view);
+		case WebContainerEditPart.VISUAL_ID:
+			return getWebContainer_3003Text(view);
+		case DatabaseEditPart.VISUAL_ID:
+			return getDatabase_2002Text(view);
+		case BrowserEditPart.VISUAL_ID:
+			return getBrowser_3001Text(view);
+		case DataReleationshipEditPart.VISUAL_ID:
+			return getDataReleationship_4002Text(view);
 		}
 		return getUnknownElementText(view);
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getContainerReleationship_4004Text(View view) {
+		IParser parser = ModelParserProvider
+				.getParser(
+						ModelElementTypes.ContainerReleationship_4004,
+						view.getElement() != null ? view.getElement() : view,
+						ModelVisualIDRegistry
+								.getType(ContainerReleationshipProtocolEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 6004); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getClient_2001Text(View view) {
+		IParser parser = ModelParserProvider.getParser(
+				ModelElementTypes.Client_2001,
+				view.getElement() != null ? view.getElement() : view,
+				ModelVisualIDRegistry.getType(ClientNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5004); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
 	}
 
 	/**
@@ -242,97 +282,26 @@ public class ModelNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getDataReleationship_4002Text(View view) {
+	private String getModel_1000Text(View view) {
+		return ""; //$NON-NLS-1$
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getAppReleationship_4003Text(View view) {
 		IParser parser = ModelParserProvider.getParser(
-				ModelElementTypes.DataReleationship_4002,
+				ModelElementTypes.AppReleationship_4003,
 				view.getElement() != null ? view.getElement() : view,
 				ModelVisualIDRegistry
-						.getType(DataReleationshipProtocolEditPart.VISUAL_ID));
+						.getType(AppReleationshipProtocolEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
 			ModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6002); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getWebContainer_3003Text(View view) {
-		IParser parser = ModelParserProvider.getParser(
-				ModelElementTypes.WebContainer_3003,
-				view.getElement() != null ? view.getElement() : view,
-				ModelVisualIDRegistry
-						.getType(WebContainerNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			ModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5009); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getBrowser_3001Text(View view) {
-		IParser parser = ModelParserProvider.getParser(
-				ModelElementTypes.Browser_3001,
-				view.getElement() != null ? view.getElement() : view,
-				ModelVisualIDRegistry.getType(BrowserNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			ModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5001); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getWebReleationship_4001Text(View view) {
-		IParser parser = ModelParserProvider.getParser(
-				ModelElementTypes.WebReleationship_4001,
-				view.getElement() != null ? view.getElement() : view,
-				ModelVisualIDRegistry
-						.getType(WebReleationshipProtocolEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			ModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6001); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getDatabase_2002Text(View view) {
-		IParser parser = ModelParserProvider.getParser(
-				ModelElementTypes.Database_2002,
-				view.getElement() != null ? view.getElement() : view,
-				ModelVisualIDRegistry.getType(DatabaseNameEditPart.VISUAL_ID));
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(
-					view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			ModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5006); //$NON-NLS-1$
+					"Parser was not found for label " + 6003); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -360,19 +329,19 @@ public class ModelNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getAppReleationship_4003Text(View view) {
+	private String getWebReleationship_4001Text(View view) {
 		IParser parser = ModelParserProvider.getParser(
-				ModelElementTypes.AppReleationship_4003,
+				ModelElementTypes.WebReleationship_4001,
 				view.getElement() != null ? view.getElement() : view,
 				ModelVisualIDRegistry
-						.getType(AppReleationshipProtocolEditPart.VISUAL_ID));
+						.getType(WebReleationshipProtocolEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
 			ModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6003); //$NON-NLS-1$
+					"Parser was not found for label " + 6001); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -400,20 +369,19 @@ public class ModelNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getContainerReleationship_4004Text(View view) {
-		IParser parser = ModelParserProvider
-				.getParser(
-						ModelElementTypes.ContainerReleationship_4004,
-						view.getElement() != null ? view.getElement() : view,
-						ModelVisualIDRegistry
-								.getType(ContainerReleationshipProtocolEditPart.VISUAL_ID));
+	private String getWebContainer_3003Text(View view) {
+		IParser parser = ModelParserProvider.getParser(
+				ModelElementTypes.WebContainer_3003,
+				view.getElement() != null ? view.getElement() : view,
+				ModelVisualIDRegistry
+						.getType(WebContainerNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
 			ModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 6004); //$NON-NLS-1$
+					"Parser was not found for label " + 5009); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -421,25 +389,57 @@ public class ModelNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getModel_1000Text(View view) {
-		return ""; //$NON-NLS-1$
-	}
-
-	/**
-	 * @generated
-	 */
-	private String getClient_2001Text(View view) {
+	private String getDatabase_2002Text(View view) {
 		IParser parser = ModelParserProvider.getParser(
-				ModelElementTypes.Client_2001,
+				ModelElementTypes.Database_2002,
 				view.getElement() != null ? view.getElement() : view,
-				ModelVisualIDRegistry.getType(ClientNameEditPart.VISUAL_ID));
+				ModelVisualIDRegistry.getType(DatabaseNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(
 					view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
 		} else {
 			ModelDiagramEditorPlugin.getInstance().logError(
-					"Parser was not found for label " + 5004); //$NON-NLS-1$
+					"Parser was not found for label " + 5006); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getBrowser_3001Text(View view) {
+		IParser parser = ModelParserProvider.getParser(
+				ModelElementTypes.Browser_3001,
+				view.getElement() != null ? view.getElement() : view,
+				ModelVisualIDRegistry.getType(BrowserNameEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 5001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getDataReleationship_4002Text(View view) {
+		IParser parser = ModelParserProvider.getParser(
+				ModelElementTypes.DataReleationship_4002,
+				view.getElement() != null ? view.getElement() : view,
+				ModelVisualIDRegistry
+						.getType(DataReleationshipProtocolEditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			ModelDiagramEditorPlugin.getInstance().logError(
+					"Parser was not found for label " + 6002); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

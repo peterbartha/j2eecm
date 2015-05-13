@@ -583,6 +583,67 @@
           lineKind="LINE_DASH"
           targetDecoration="//@figures.0/@figures.0"/>
     </descriptors>
+    <descriptors
+        name="EnumElementFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="EnumElementFigure">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            red="77"
+            green="137"
+            blue="20"/>
+        <minimumSize
+            dx="150"
+            dy="150"/>
+        <children
+            xsi:type="gmfgraph:InvisibleRectangle"
+            name="EnumElementHeader">
+          <layout
+              xsi:type="gmfgraph:GridLayout"/>
+          <children
+              xsi:type="gmfgraph:Label"
+              name="EnumElementNameFigure"
+              text="&lt;...>">
+            <layoutData
+                xsi:type="gmfgraph:GridLayoutData"
+                grabExcessHorizontalSpace="true"
+                grabExcessVerticalSpace="true"/>
+          </children>
+        </children>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.13/@actualFigure/@children.0/@children.0"/>
+    </descriptors>
+    <descriptors
+        name="EnumLiteralFigure">
+      <actualFigure
+          xsi:type="gmfgraph:Rectangle"
+          name="EnumLiteralFigure"
+          outline="false"
+          fill="false"
+          lineWidth="0">
+        <layout
+            xsi:type="gmfgraph:FlowLayout"/>
+        <border
+            xsi:type="gmfgraph:MarginBorder">
+          <insets
+              top="5"
+              left="5"
+              bottom="5"
+              right="5"/>
+        </border>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="EnumLiteralNameFigure"
+            text="&lt;...>"/>
+      </actualFigure>
+      <accessors
+          accessor="getFigureEnumLiteralNameFigure"
+          figure="//@figures.0/@descriptors.14/@actualFigure/@children.0"/>
+    </descriptors>
   </figures>
   <nodes
       name="EntityBean"
@@ -611,6 +672,12 @@
   <nodes
       name="InterfaceElement"
       figure="InterfaceElementFigure"/>
+  <nodes
+      name="EnumElement"
+      figure="EnumElementFigure"/>
+  <nodes
+      name="EnumLiteral"
+      figure="EnumLiteralFigure"/>
   <connections
       name="Association"
       figure="AssociationFigure"/>
@@ -634,6 +701,9 @@
       figure="ClassElementFigure"
       collapsible="true"
       accessor="//@figures.0/@descriptors.8/@accessors.1"/>
+  <compartments
+      name="EnumLiteralCompartment"
+      figure="EnumLiteralFigure"/>
   <labels
       name="EntityBeanName"
       figure="EntityBeanFigure"
@@ -710,4 +780,12 @@
       figure="AggregationFigure"
       elementIcon="false"
       accessor="//@figures.0/@descriptors.11/@accessors.1"/>
+  <labels
+      name="EnumElementName"
+      figure="EnumElementFigure"
+      accessor="//@figures.0/@descriptors.13/@accessors.0"/>
+  <labels
+      name="EnumLiteralName"
+      figure="EnumLiteralFigure"
+      accessor="//@figures.0/@descriptors.14/@accessors.0"/>
 </gmfgraph:Canvas>

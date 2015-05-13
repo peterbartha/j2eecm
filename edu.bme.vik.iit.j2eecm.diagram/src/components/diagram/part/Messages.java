@@ -403,52 +403,22 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String NavigatorGroupName_ContainerReleationship_4004_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_ContainerReleationship_4004_source;
+
+	/**
+	 * @generated
+	 */
 	public static String NavigatorGroupName_ApplicationClient_3002_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_DataReleationship_4002_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_DataReleationship_4002_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_WebContainer_3003_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_WebContainer_3003_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Browser_3001_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_WebReleationship_4001_target;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_WebReleationship_4001_source;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Database_2002_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_J2EEServer_2003_outgoinglinks;
+	public static String NavigatorGroupName_Model_1000_links;
 
 	/**
 	 * @generated
@@ -463,22 +433,52 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String NavigatorGroupName_J2EEServer_2003_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_WebReleationship_4001_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_WebReleationship_4001_source;
+
+	/**
+	 * @generated
+	 */
 	public static String NavigatorGroupName_EJBContainer_3004_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_ContainerReleationship_4004_target;
+	public static String NavigatorGroupName_WebContainer_3003_incominglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_ContainerReleationship_4004_source;
+	public static String NavigatorGroupName_WebContainer_3003_outgoinglinks;
 
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Model_1000_links;
+	public static String NavigatorGroupName_Database_2002_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Browser_3001_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_DataReleationship_4002_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_DataReleationship_4002_source;
 
 	/**
 	 * @generated

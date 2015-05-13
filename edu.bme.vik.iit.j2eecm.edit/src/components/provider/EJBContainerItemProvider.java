@@ -107,6 +107,7 @@ public class EJBContainerItemProvider
 			childrenFeatures.add(ComponentsPackage.Literals.EJB_CONTAINER__CLASSIFIERS);
 			childrenFeatures.add(ComponentsPackage.Literals.EJB_CONTAINER__RELIZATION_RELATIONSHIP);
 			childrenFeatures.add(ComponentsPackage.Literals.EJB_CONTAINER__ASSOCIATIONS);
+			childrenFeatures.add(ComponentsPackage.Literals.EJB_CONTAINER__ENUMS);
 		}
 		return childrenFeatures;
 	}
@@ -169,6 +170,7 @@ public class EJBContainerItemProvider
 			case ComponentsPackage.EJB_CONTAINER__CLASSIFIERS:
 			case ComponentsPackage.EJB_CONTAINER__RELIZATION_RELATIONSHIP:
 			case ComponentsPackage.EJB_CONTAINER__ASSOCIATIONS:
+			case ComponentsPackage.EJB_CONTAINER__ENUMS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -248,6 +250,11 @@ public class EJBContainerItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
+				(ComponentsPackage.Literals.EJB_CONTAINER__NAMED_ELEMENTS,
+				 ComponentsFactory.eINSTANCE.createEnumElement()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(ComponentsPackage.Literals.EJB_CONTAINER__CLASSIFIERS,
 				 ComponentsFactory.eINSTANCE.createClassElement()));
 
@@ -305,6 +312,11 @@ public class EJBContainerItemProvider
 			(createChildParameter
 				(ComponentsPackage.Literals.EJB_CONTAINER__ASSOCIATIONS,
 				 ComponentsFactory.eINSTANCE.createAggregation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentsPackage.Literals.EJB_CONTAINER__ENUMS,
+				 ComponentsFactory.eINSTANCE.createEnumElement()));
 	}
 
 	/**
@@ -321,7 +333,8 @@ public class EJBContainerItemProvider
 		boolean qualify =
 			childFeature == ComponentsPackage.Literals.EJB_CONTAINER__NAMED_ELEMENTS ||
 			childFeature == ComponentsPackage.Literals.EJB_CONTAINER__CLASSIFIERS ||
-			childFeature == ComponentsPackage.Literals.EJB_CONTAINER__ASSOCIATIONS;
+			childFeature == ComponentsPackage.Literals.EJB_CONTAINER__ASSOCIATIONS ||
+			childFeature == ComponentsPackage.Literals.EJB_CONTAINER__ENUMS;
 
 		if (qualify) {
 			return getString

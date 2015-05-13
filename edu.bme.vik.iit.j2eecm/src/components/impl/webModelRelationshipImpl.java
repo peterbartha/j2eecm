@@ -5,14 +5,10 @@ package components.impl;
 import components.ComponentsPackage;
 import components.WebContainerElement;
 import components.webModelRelationship;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class webModelRelationshipImpl extends MinimalEObjectImpl.Container implements webModelRelationship {
+public class webModelRelationshipImpl extends WebContainerRelationsImpl implements webModelRelationship {
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->

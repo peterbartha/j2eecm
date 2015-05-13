@@ -4,12 +4,12 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: edu.bme.vik.iit.j2eecm.diagram.ejbcontainer; singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: components.diagram.part.ModelDiagramEditorPlugin
+Bundle-Activator: ejb.container.diagram.part.ModelDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: components.diagram.edit.parts,
- components.diagram.part,
- components.diagram.providers
+Export-Package: ejb.container.diagram.edit.parts, 
+ ejb.container.diagram.part,
+ ejb.container.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.core.expressions,

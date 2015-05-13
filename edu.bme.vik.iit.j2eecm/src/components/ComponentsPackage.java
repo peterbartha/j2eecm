@@ -452,13 +452,67 @@ public interface ComponentsPackage extends EPackage {
 	int WEB_CONTAINER__ELEMENTS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Struts</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_CONTAINER__STRUTS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Static Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_CONTAINER__STATIC_ELEMENTS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Struts Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_CONTAINER__STRUTS_ACTIONS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Webrelations</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_CONTAINER__WEBRELATIONS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Link Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_CONTAINER__LINK_ELEMENTS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Global</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_CONTAINER__GLOBAL = 8;
+
+	/**
 	 * The number of structural features of the '<em>Web Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_CONTAINER_FEATURE_COUNT = 3;
+	int WEB_CONTAINER_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Web Container</em>' class.
@@ -534,13 +588,22 @@ public interface ComponentsPackage extends EPackage {
 	int EJB_CONTAINER__ASSOCIATIONS = 5;
 
 	/**
+	 * The feature id for the '<em><b>Enums</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EJB_CONTAINER__ENUMS = 6;
+
+	/**
 	 * The number of structural features of the '<em>EJB Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EJB_CONTAINER_FEATURE_COUNT = 6;
+	int EJB_CONTAINER_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>EJB Container</em>' class.
@@ -1602,13 +1665,22 @@ public interface ComponentsPackage extends EPackage {
 	int JSP_PAGE__NAME = WEB_CONTAINER_ELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Links</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JSP_PAGE__LINKS = WEB_CONTAINER_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>JSP Page</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JSP_PAGE_FEATURE_COUNT = WEB_CONTAINER_ELEMENT_FEATURE_COUNT + 0;
+	int JSP_PAGE_FEATURE_COUNT = WEB_CONTAINER_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>JSP Page</em>' class.
@@ -2178,6 +2250,34 @@ public interface ComponentsPackage extends EPackage {
 	int GENERALIZATION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link components.impl.WebContainerRelationsImpl <em>Web Container Relations</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.WebContainerRelationsImpl
+	 * @see components.impl.ComponentsPackageImpl#getWebContainerRelations()
+	 * @generated
+	 */
+	int WEB_CONTAINER_RELATIONS = 53;
+
+	/**
+	 * The number of structural features of the '<em>Web Container Relations</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_CONTAINER_RELATIONS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Web Container Relations</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_CONTAINER_RELATIONS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link components.impl.webModelRelationshipImpl <em>web Model Relationship</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2194,7 +2294,7 @@ public interface ComponentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_MODEL_RELATIONSHIP__TARGET = 0;
+	int WEB_MODEL_RELATIONSHIP__TARGET = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -2203,7 +2303,7 @@ public interface ComponentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_MODEL_RELATIONSHIP__SOURCE = 1;
+	int WEB_MODEL_RELATIONSHIP__SOURCE = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Label</b></em>' attribute.
@@ -2212,7 +2312,7 @@ public interface ComponentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_MODEL_RELATIONSHIP__LABEL = 2;
+	int WEB_MODEL_RELATIONSHIP__LABEL = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>web Model Relationship</em>' class.
@@ -2221,7 +2321,7 @@ public interface ComponentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_MODEL_RELATIONSHIP_FEATURE_COUNT = 3;
+	int WEB_MODEL_RELATIONSHIP_FEATURE_COUNT = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>web Model Relationship</em>' class.
@@ -2230,7 +2330,7 @@ public interface ComponentsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_MODEL_RELATIONSHIP_OPERATION_COUNT = 0;
+	int WEB_MODEL_RELATIONSHIP_OPERATION_COUNT = WEB_CONTAINER_RELATIONS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link components.impl.InterfaceElementImpl <em>Interface Element</em>}' class.
@@ -2443,6 +2543,707 @@ public interface ComponentsPackage extends EPackage {
 	int REALIZATION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link components.impl.StrutsImpl <em>Struts</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.StrutsImpl
+	 * @see components.impl.ComponentsPackageImpl#getStruts()
+	 * @generated
+	 */
+	int STRUTS = 36;
+
+	/**
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS__ACTIONS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Struts</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Struts</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.StrutsGlobalImpl <em>Struts Global</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.StrutsGlobalImpl
+	 * @see components.impl.ComponentsPackageImpl#getStrutsGlobal()
+	 * @generated
+	 */
+	int STRUTS_GLOBAL = 37;
+
+	/**
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_GLOBAL__ACTIONS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Struts Global</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_GLOBAL_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Struts Global</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_GLOBAL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.ActionImpl <em>Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.ActionImpl
+	 * @see components.impl.ComponentsPackageImpl#getAction()
+	 * @generated
+	 */
+	int ACTION = 38;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.ActionRelationshipImpl <em>Action Relationship</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.ActionRelationshipImpl
+	 * @see components.impl.ComponentsPackageImpl#getActionRelationship()
+	 * @generated
+	 */
+	int ACTION_RELATIONSHIP = 39;
+
+	/**
+	 * The feature id for the '<em><b>Action Elem</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_RELATIONSHIP__ACTION_ELEM = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Page Elem</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_RELATIONSHIP__PAGE_ELEM = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Action Relationship</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_RELATIONSHIP_FEATURE_COUNT = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Action Relationship</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTION_RELATIONSHIP_OPERATION_COUNT = WEB_CONTAINER_RELATIONS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.StrutsRelationImpl <em>Struts Relation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.StrutsRelationImpl
+	 * @see components.impl.ComponentsPackageImpl#getStrutsRelation()
+	 * @generated
+	 */
+	int STRUTS_RELATION = 40;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_RELATION__TARGET = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_RELATION__SOURCE = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Struts Relation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_RELATION_FEATURE_COUNT = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Struts Relation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_RELATION_OPERATION_COUNT = WEB_CONTAINER_RELATIONS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.StaticWebElementImpl <em>Static Web Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.StaticWebElementImpl
+	 * @see components.impl.ComponentsPackageImpl#getStaticWebElement()
+	 * @generated
+	 */
+	int STATIC_WEB_ELEMENT = 48;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_WEB_ELEMENT__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Static Web Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_WEB_ELEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Static Web Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_WEB_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.XMLConfigImpl <em>XML Config</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.XMLConfigImpl
+	 * @see components.impl.ComponentsPackageImpl#getXMLConfig()
+	 * @generated
+	 */
+	int XML_CONFIG = 41;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int XML_CONFIG__NAME = STATIC_WEB_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>XML Config</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int XML_CONFIG_FEATURE_COUNT = STATIC_WEB_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>XML Config</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int XML_CONFIG_OPERATION_COUNT = STATIC_WEB_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.StrutsOperationImpl <em>Struts Operation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.StrutsOperationImpl
+	 * @see components.impl.ComponentsPackageImpl#getStrutsOperation()
+	 * @generated
+	 */
+	int STRUTS_OPERATION = 42;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_OPERATION__NAME = ACTION__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Struts Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_OPERATION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Struts Operation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_OPERATION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.ExceptionHandlingImpl <em>Exception Handling</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.ExceptionHandlingImpl
+	 * @see components.impl.ComponentsPackageImpl#getExceptionHandling()
+	 * @generated
+	 */
+	int EXCEPTION_HANDLING = 43;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_HANDLING__NAME = ACTION__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Exception Handling</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_HANDLING_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Exception Handling</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXCEPTION_HANDLING_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.EventCallImpl <em>Event Call</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.EventCallImpl
+	 * @see components.impl.ComponentsPackageImpl#getEventCall()
+	 * @generated
+	 */
+	int EVENT_CALL = 44;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_CALL__NAME = ACTION__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Event Call</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_CALL_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Event Call</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT_CALL_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.EnumElementImpl <em>Enum Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.EnumElementImpl
+	 * @see components.impl.ComponentsPackageImpl#getEnumElement()
+	 * @generated
+	 */
+	int ENUM_ELEMENT = 45;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_ELEMENT__NAME = PACKAGEABLE_ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visibility</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_ELEMENT__VISIBILITY = PACKAGEABLE_ELEMENT__VISIBILITY;
+
+	/**
+	 * The feature id for the '<em><b>Literals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_ELEMENT__LITERALS = PACKAGEABLE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Enum Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_ELEMENT_FEATURE_COUNT = PACKAGEABLE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Enum Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_ELEMENT_OPERATION_COUNT = PACKAGEABLE_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.EnumLiteralImpl <em>Enum Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.EnumLiteralImpl
+	 * @see components.impl.ComponentsPackageImpl#getEnumLiteral()
+	 * @generated
+	 */
+	int ENUM_LITERAL = 46;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_LITERAL__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Enum Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_LITERAL_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Enum Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUM_LITERAL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.HTML5Impl <em>HTML5</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.HTML5Impl
+	 * @see components.impl.ComponentsPackageImpl#getHTML5()
+	 * @generated
+	 */
+	int HTML5 = 47;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML5__NAME = STATIC_WEB_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>HTML5</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML5_FEATURE_COUNT = STATIC_WEB_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>HTML5</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML5_OPERATION_COUNT = STATIC_WEB_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.staticRelationshipImpl <em>static Relationship</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.staticRelationshipImpl
+	 * @see components.impl.ComponentsPackageImpl#getstaticRelationship()
+	 * @generated
+	 */
+	int STATIC_RELATIONSHIP = 49;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_RELATIONSHIP__TARGET = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_RELATIONSHIP__SOURCE = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>static Relationship</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_RELATIONSHIP_FEATURE_COUNT = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>static Relationship</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIC_RELATIONSHIP_OPERATION_COUNT = WEB_CONTAINER_RELATIONS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.LinkElementImpl <em>Link Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.LinkElementImpl
+	 * @see components.impl.ComponentsPackageImpl#getLinkElement()
+	 * @generated
+	 */
+	int LINK_ELEMENT = 50;
+
+	/**
+	 * The feature id for the '<em><b>Link</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_ELEMENT__LINK = 0;
+
+	/**
+	 * The number of structural features of the '<em>Link Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_ELEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Link Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.linkRelationshipImpl <em>link Relationship</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.linkRelationshipImpl
+	 * @see components.impl.ComponentsPackageImpl#getlinkRelationship()
+	 * @generated
+	 */
+	int LINK_RELATIONSHIP = 51;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_RELATIONSHIP__SOURCE = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_RELATIONSHIP__TARGET = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>link Relationship</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_RELATIONSHIP_FEATURE_COUNT = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>link Relationship</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_RELATIONSHIP_OPERATION_COUNT = WEB_CONTAINER_RELATIONS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link components.impl.strutsLinkRelationImpl <em>struts Link Relation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see components.impl.strutsLinkRelationImpl
+	 * @see components.impl.ComponentsPackageImpl#getstrutsLinkRelation()
+	 * @generated
+	 */
+	int STRUTS_LINK_RELATION = 52;
+
+	/**
+	 * The feature id for the '<em><b>Source</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_LINK_RELATION__SOURCE = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_LINK_RELATION__TARGET = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>struts Link Relation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_LINK_RELATION_FEATURE_COUNT = WEB_CONTAINER_RELATIONS_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>struts Link Relation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUTS_LINK_RELATION_OPERATION_COUNT = WEB_CONTAINER_RELATIONS_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link components.VisibilityKind <em>Visibility Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2450,7 +3251,7 @@ public interface ComponentsPackage extends EPackage {
 	 * @see components.impl.ComponentsPackageImpl#getVisibilityKind()
 	 * @generated
 	 */
-	int VISIBILITY_KIND = 36;
+	int VISIBILITY_KIND = 54;
 
 	/**
 	 * The meta object id for the '{@link components.ViewTypeKind <em>View Type Kind</em>}' enum.
@@ -2460,7 +3261,7 @@ public interface ComponentsPackage extends EPackage {
 	 * @see components.impl.ComponentsPackageImpl#getViewTypeKind()
 	 * @generated
 	 */
-	int VIEW_TYPE_KIND = 37;
+	int VIEW_TYPE_KIND = 55;
 
 
 	/**
@@ -2798,6 +3599,72 @@ public interface ComponentsPackage extends EPackage {
 	EReference getWebContainer_Elements();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link components.WebContainer#getStruts <em>Struts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Struts</em>'.
+	 * @see components.WebContainer#getStruts()
+	 * @see #getWebContainer()
+	 * @generated
+	 */
+	EReference getWebContainer_Struts();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link components.WebContainer#getStaticElements <em>Static Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Static Elements</em>'.
+	 * @see components.WebContainer#getStaticElements()
+	 * @see #getWebContainer()
+	 * @generated
+	 */
+	EReference getWebContainer_StaticElements();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link components.WebContainer#getStrutsActions <em>Struts Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Struts Actions</em>'.
+	 * @see components.WebContainer#getStrutsActions()
+	 * @see #getWebContainer()
+	 * @generated
+	 */
+	EReference getWebContainer_StrutsActions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link components.WebContainer#getWebrelations <em>Webrelations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Webrelations</em>'.
+	 * @see components.WebContainer#getWebrelations()
+	 * @see #getWebContainer()
+	 * @generated
+	 */
+	EReference getWebContainer_Webrelations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link components.WebContainer#getLinkElements <em>Link Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Link Elements</em>'.
+	 * @see components.WebContainer#getLinkElements()
+	 * @see #getWebContainer()
+	 * @generated
+	 */
+	EReference getWebContainer_LinkElements();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link components.WebContainer#getGlobal <em>Global</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Global</em>'.
+	 * @see components.WebContainer#getGlobal()
+	 * @see #getWebContainer()
+	 * @generated
+	 */
+	EReference getWebContainer_Global();
+
+	/**
 	 * Returns the meta object for class '{@link components.EJBContainer <em>EJB Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2872,6 +3739,17 @@ public interface ComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEJBContainer_Associations();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link components.EJBContainer#getEnums <em>Enums</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Enums</em>'.
+	 * @see components.EJBContainer#getEnums()
+	 * @see #getEJBContainer()
+	 * @generated
+	 */
+	EReference getEJBContainer_Enums();
 
 	/**
 	 * Returns the meta object for class '{@link components.EJB <em>EJB</em>}'.
@@ -2963,6 +3841,17 @@ public interface ComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getJSPPage();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link components.JSPPage#getLinks <em>Links</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Links</em>'.
+	 * @see components.JSPPage#getLinks()
+	 * @see #getJSPPage()
+	 * @generated
+	 */
+	EReference getJSPPage_Links();
 
 	/**
 	 * Returns the meta object for class '{@link components.ContainerReleationship <em>Container Releationship</em>}'.
@@ -3572,6 +4461,384 @@ public interface ComponentsPackage extends EPackage {
 	EReference getClassifierElement_OwnedProperty();
 
 	/**
+	 * Returns the meta object for class '{@link components.Struts <em>Struts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Struts</em>'.
+	 * @see components.Struts
+	 * @generated
+	 */
+	EClass getStruts();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link components.Struts#getActions <em>Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Actions</em>'.
+	 * @see components.Struts#getActions()
+	 * @see #getStruts()
+	 * @generated
+	 */
+	EReference getStruts_Actions();
+
+	/**
+	 * Returns the meta object for the attribute '{@link components.Struts#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see components.Struts#getName()
+	 * @see #getStruts()
+	 * @generated
+	 */
+	EAttribute getStruts_Name();
+
+	/**
+	 * Returns the meta object for class '{@link components.StrutsGlobal <em>Struts Global</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Struts Global</em>'.
+	 * @see components.StrutsGlobal
+	 * @generated
+	 */
+	EClass getStrutsGlobal();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link components.StrutsGlobal#getActions <em>Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Actions</em>'.
+	 * @see components.StrutsGlobal#getActions()
+	 * @see #getStrutsGlobal()
+	 * @generated
+	 */
+	EReference getStrutsGlobal_Actions();
+
+	/**
+	 * Returns the meta object for class '{@link components.Action <em>Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Action</em>'.
+	 * @see components.Action
+	 * @generated
+	 */
+	EClass getAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link components.Action#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see components.Action#getName()
+	 * @see #getAction()
+	 * @generated
+	 */
+	EAttribute getAction_Name();
+
+	/**
+	 * Returns the meta object for class '{@link components.ActionRelationship <em>Action Relationship</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Action Relationship</em>'.
+	 * @see components.ActionRelationship
+	 * @generated
+	 */
+	EClass getActionRelationship();
+
+	/**
+	 * Returns the meta object for the reference '{@link components.ActionRelationship#getActionElem <em>Action Elem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Action Elem</em>'.
+	 * @see components.ActionRelationship#getActionElem()
+	 * @see #getActionRelationship()
+	 * @generated
+	 */
+	EReference getActionRelationship_ActionElem();
+
+	/**
+	 * Returns the meta object for the reference '{@link components.ActionRelationship#getPageElem <em>Page Elem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Page Elem</em>'.
+	 * @see components.ActionRelationship#getPageElem()
+	 * @see #getActionRelationship()
+	 * @generated
+	 */
+	EReference getActionRelationship_PageElem();
+
+	/**
+	 * Returns the meta object for class '{@link components.StrutsRelation <em>Struts Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Struts Relation</em>'.
+	 * @see components.StrutsRelation
+	 * @generated
+	 */
+	EClass getStrutsRelation();
+
+	/**
+	 * Returns the meta object for the reference '{@link components.StrutsRelation#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see components.StrutsRelation#getTarget()
+	 * @see #getStrutsRelation()
+	 * @generated
+	 */
+	EReference getStrutsRelation_Target();
+
+	/**
+	 * Returns the meta object for the reference '{@link components.StrutsRelation#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see components.StrutsRelation#getSource()
+	 * @see #getStrutsRelation()
+	 * @generated
+	 */
+	EReference getStrutsRelation_Source();
+
+	/**
+	 * Returns the meta object for class '{@link components.XMLConfig <em>XML Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>XML Config</em>'.
+	 * @see components.XMLConfig
+	 * @generated
+	 */
+	EClass getXMLConfig();
+
+	/**
+	 * Returns the meta object for class '{@link components.StrutsOperation <em>Struts Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Struts Operation</em>'.
+	 * @see components.StrutsOperation
+	 * @generated
+	 */
+	EClass getStrutsOperation();
+
+	/**
+	 * Returns the meta object for class '{@link components.ExceptionHandling <em>Exception Handling</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Exception Handling</em>'.
+	 * @see components.ExceptionHandling
+	 * @generated
+	 */
+	EClass getExceptionHandling();
+
+	/**
+	 * Returns the meta object for class '{@link components.EventCall <em>Event Call</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Event Call</em>'.
+	 * @see components.EventCall
+	 * @generated
+	 */
+	EClass getEventCall();
+
+	/**
+	 * Returns the meta object for class '{@link components.EnumElement <em>Enum Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Enum Element</em>'.
+	 * @see components.EnumElement
+	 * @generated
+	 */
+	EClass getEnumElement();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link components.EnumElement#getLiterals <em>Literals</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Literals</em>'.
+	 * @see components.EnumElement#getLiterals()
+	 * @see #getEnumElement()
+	 * @generated
+	 */
+	EReference getEnumElement_Literals();
+
+	/**
+	 * Returns the meta object for class '{@link components.EnumLiteral <em>Enum Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Enum Literal</em>'.
+	 * @see components.EnumLiteral
+	 * @generated
+	 */
+	EClass getEnumLiteral();
+
+	/**
+	 * Returns the meta object for the attribute '{@link components.EnumLiteral#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see components.EnumLiteral#getName()
+	 * @see #getEnumLiteral()
+	 * @generated
+	 */
+	EAttribute getEnumLiteral_Name();
+
+	/**
+	 * Returns the meta object for class '{@link components.HTML5 <em>HTML5</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>HTML5</em>'.
+	 * @see components.HTML5
+	 * @generated
+	 */
+	EClass getHTML5();
+
+	/**
+	 * Returns the meta object for class '{@link components.StaticWebElement <em>Static Web Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Static Web Element</em>'.
+	 * @see components.StaticWebElement
+	 * @generated
+	 */
+	EClass getStaticWebElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link components.StaticWebElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see components.StaticWebElement#getName()
+	 * @see #getStaticWebElement()
+	 * @generated
+	 */
+	EAttribute getStaticWebElement_Name();
+
+	/**
+	 * Returns the meta object for class '{@link components.staticRelationship <em>static Relationship</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>static Relationship</em>'.
+	 * @see components.staticRelationship
+	 * @generated
+	 */
+	EClass getstaticRelationship();
+
+	/**
+	 * Returns the meta object for the reference '{@link components.staticRelationship#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see components.staticRelationship#getTarget()
+	 * @see #getstaticRelationship()
+	 * @generated
+	 */
+	EReference getstaticRelationship_Target();
+
+	/**
+	 * Returns the meta object for the reference '{@link components.staticRelationship#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see components.staticRelationship#getSource()
+	 * @see #getstaticRelationship()
+	 * @generated
+	 */
+	EReference getstaticRelationship_Source();
+
+	/**
+	 * Returns the meta object for class '{@link components.LinkElement <em>Link Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Link Element</em>'.
+	 * @see components.LinkElement
+	 * @generated
+	 */
+	EClass getLinkElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link components.LinkElement#getLink <em>Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Link</em>'.
+	 * @see components.LinkElement#getLink()
+	 * @see #getLinkElement()
+	 * @generated
+	 */
+	EAttribute getLinkElement_Link();
+
+	/**
+	 * Returns the meta object for class '{@link components.linkRelationship <em>link Relationship</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>link Relationship</em>'.
+	 * @see components.linkRelationship
+	 * @generated
+	 */
+	EClass getlinkRelationship();
+
+	/**
+	 * Returns the meta object for the reference '{@link components.linkRelationship#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see components.linkRelationship#getSource()
+	 * @see #getlinkRelationship()
+	 * @generated
+	 */
+	EReference getlinkRelationship_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link components.linkRelationship#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see components.linkRelationship#getTarget()
+	 * @see #getlinkRelationship()
+	 * @generated
+	 */
+	EReference getlinkRelationship_Target();
+
+	/**
+	 * Returns the meta object for class '{@link components.strutsLinkRelation <em>struts Link Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>struts Link Relation</em>'.
+	 * @see components.strutsLinkRelation
+	 * @generated
+	 */
+	EClass getstrutsLinkRelation();
+
+	/**
+	 * Returns the meta object for the reference '{@link components.strutsLinkRelation#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Source</em>'.
+	 * @see components.strutsLinkRelation#getSource()
+	 * @see #getstrutsLinkRelation()
+	 * @generated
+	 */
+	EReference getstrutsLinkRelation_Source();
+
+	/**
+	 * Returns the meta object for the reference '{@link components.strutsLinkRelation#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see components.strutsLinkRelation#getTarget()
+	 * @see #getstrutsLinkRelation()
+	 * @generated
+	 */
+	EReference getstrutsLinkRelation_Target();
+
+	/**
+	 * Returns the meta object for class '{@link components.WebContainerRelations <em>Web Container Relations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Web Container Relations</em>'.
+	 * @see components.WebContainerRelations
+	 * @generated
+	 */
+	EClass getWebContainerRelations();
+
+	/**
 	 * Returns the meta object for enum '{@link components.VisibilityKind <em>Visibility Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3877,6 +5144,54 @@ public interface ComponentsPackage extends EPackage {
 		EReference WEB_CONTAINER__ELEMENTS = eINSTANCE.getWebContainer_Elements();
 
 		/**
+		 * The meta object literal for the '<em><b>Struts</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_CONTAINER__STRUTS = eINSTANCE.getWebContainer_Struts();
+
+		/**
+		 * The meta object literal for the '<em><b>Static Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_CONTAINER__STATIC_ELEMENTS = eINSTANCE.getWebContainer_StaticElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Struts Actions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_CONTAINER__STRUTS_ACTIONS = eINSTANCE.getWebContainer_StrutsActions();
+
+		/**
+		 * The meta object literal for the '<em><b>Webrelations</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_CONTAINER__WEBRELATIONS = eINSTANCE.getWebContainer_Webrelations();
+
+		/**
+		 * The meta object literal for the '<em><b>Link Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_CONTAINER__LINK_ELEMENTS = eINSTANCE.getWebContainer_LinkElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Global</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_CONTAINER__GLOBAL = eINSTANCE.getWebContainer_Global();
+
+		/**
 		 * The meta object literal for the '{@link components.impl.EJBContainerImpl <em>EJB Container</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3933,6 +5248,14 @@ public interface ComponentsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference EJB_CONTAINER__ASSOCIATIONS = eINSTANCE.getEJBContainer_Associations();
+
+		/**
+		 * The meta object literal for the '<em><b>Enums</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EJB_CONTAINER__ENUMS = eINSTANCE.getEJBContainer_Enums();
 
 		/**
 		 * The meta object literal for the '{@link components.impl.EJBImpl <em>EJB</em>}' class.
@@ -4021,6 +5344,14 @@ public interface ComponentsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass JSP_PAGE = eINSTANCE.getJSPPage();
+
+		/**
+		 * The meta object literal for the '<em><b>Links</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference JSP_PAGE__LINKS = eINSTANCE.getJSPPage_Links();
 
 		/**
 		 * The meta object literal for the '{@link components.impl.ContainerReleationshipImpl <em>Container Releationship</em>}' class.
@@ -4517,6 +5848,330 @@ public interface ComponentsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLASSIFIER_ELEMENT__OWNED_PROPERTY = eINSTANCE.getClassifierElement_OwnedProperty();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.StrutsImpl <em>Struts</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.StrutsImpl
+		 * @see components.impl.ComponentsPackageImpl#getStruts()
+		 * @generated
+		 */
+		EClass STRUTS = eINSTANCE.getStruts();
+
+		/**
+		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUTS__ACTIONS = eINSTANCE.getStruts_Actions();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRUTS__NAME = eINSTANCE.getStruts_Name();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.StrutsGlobalImpl <em>Struts Global</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.StrutsGlobalImpl
+		 * @see components.impl.ComponentsPackageImpl#getStrutsGlobal()
+		 * @generated
+		 */
+		EClass STRUTS_GLOBAL = eINSTANCE.getStrutsGlobal();
+
+		/**
+		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUTS_GLOBAL__ACTIONS = eINSTANCE.getStrutsGlobal_Actions();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.ActionImpl <em>Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.ActionImpl
+		 * @see components.impl.ComponentsPackageImpl#getAction()
+		 * @generated
+		 */
+		EClass ACTION = eINSTANCE.getAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACTION__NAME = eINSTANCE.getAction_Name();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.ActionRelationshipImpl <em>Action Relationship</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.ActionRelationshipImpl
+		 * @see components.impl.ComponentsPackageImpl#getActionRelationship()
+		 * @generated
+		 */
+		EClass ACTION_RELATIONSHIP = eINSTANCE.getActionRelationship();
+
+		/**
+		 * The meta object literal for the '<em><b>Action Elem</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTION_RELATIONSHIP__ACTION_ELEM = eINSTANCE.getActionRelationship_ActionElem();
+
+		/**
+		 * The meta object literal for the '<em><b>Page Elem</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTION_RELATIONSHIP__PAGE_ELEM = eINSTANCE.getActionRelationship_PageElem();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.StrutsRelationImpl <em>Struts Relation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.StrutsRelationImpl
+		 * @see components.impl.ComponentsPackageImpl#getStrutsRelation()
+		 * @generated
+		 */
+		EClass STRUTS_RELATION = eINSTANCE.getStrutsRelation();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUTS_RELATION__TARGET = eINSTANCE.getStrutsRelation_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUTS_RELATION__SOURCE = eINSTANCE.getStrutsRelation_Source();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.XMLConfigImpl <em>XML Config</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.XMLConfigImpl
+		 * @see components.impl.ComponentsPackageImpl#getXMLConfig()
+		 * @generated
+		 */
+		EClass XML_CONFIG = eINSTANCE.getXMLConfig();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.StrutsOperationImpl <em>Struts Operation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.StrutsOperationImpl
+		 * @see components.impl.ComponentsPackageImpl#getStrutsOperation()
+		 * @generated
+		 */
+		EClass STRUTS_OPERATION = eINSTANCE.getStrutsOperation();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.ExceptionHandlingImpl <em>Exception Handling</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.ExceptionHandlingImpl
+		 * @see components.impl.ComponentsPackageImpl#getExceptionHandling()
+		 * @generated
+		 */
+		EClass EXCEPTION_HANDLING = eINSTANCE.getExceptionHandling();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.EventCallImpl <em>Event Call</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.EventCallImpl
+		 * @see components.impl.ComponentsPackageImpl#getEventCall()
+		 * @generated
+		 */
+		EClass EVENT_CALL = eINSTANCE.getEventCall();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.EnumElementImpl <em>Enum Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.EnumElementImpl
+		 * @see components.impl.ComponentsPackageImpl#getEnumElement()
+		 * @generated
+		 */
+		EClass ENUM_ELEMENT = eINSTANCE.getEnumElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Literals</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENUM_ELEMENT__LITERALS = eINSTANCE.getEnumElement_Literals();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.EnumLiteralImpl <em>Enum Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.EnumLiteralImpl
+		 * @see components.impl.ComponentsPackageImpl#getEnumLiteral()
+		 * @generated
+		 */
+		EClass ENUM_LITERAL = eINSTANCE.getEnumLiteral();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENUM_LITERAL__NAME = eINSTANCE.getEnumLiteral_Name();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.HTML5Impl <em>HTML5</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.HTML5Impl
+		 * @see components.impl.ComponentsPackageImpl#getHTML5()
+		 * @generated
+		 */
+		EClass HTML5 = eINSTANCE.getHTML5();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.StaticWebElementImpl <em>Static Web Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.StaticWebElementImpl
+		 * @see components.impl.ComponentsPackageImpl#getStaticWebElement()
+		 * @generated
+		 */
+		EClass STATIC_WEB_ELEMENT = eINSTANCE.getStaticWebElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATIC_WEB_ELEMENT__NAME = eINSTANCE.getStaticWebElement_Name();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.staticRelationshipImpl <em>static Relationship</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.staticRelationshipImpl
+		 * @see components.impl.ComponentsPackageImpl#getstaticRelationship()
+		 * @generated
+		 */
+		EClass STATIC_RELATIONSHIP = eINSTANCE.getstaticRelationship();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATIC_RELATIONSHIP__TARGET = eINSTANCE.getstaticRelationship_Target();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATIC_RELATIONSHIP__SOURCE = eINSTANCE.getstaticRelationship_Source();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.LinkElementImpl <em>Link Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.LinkElementImpl
+		 * @see components.impl.ComponentsPackageImpl#getLinkElement()
+		 * @generated
+		 */
+		EClass LINK_ELEMENT = eINSTANCE.getLinkElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Link</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LINK_ELEMENT__LINK = eINSTANCE.getLinkElement_Link();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.linkRelationshipImpl <em>link Relationship</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.linkRelationshipImpl
+		 * @see components.impl.ComponentsPackageImpl#getlinkRelationship()
+		 * @generated
+		 */
+		EClass LINK_RELATIONSHIP = eINSTANCE.getlinkRelationship();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LINK_RELATIONSHIP__SOURCE = eINSTANCE.getlinkRelationship_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LINK_RELATIONSHIP__TARGET = eINSTANCE.getlinkRelationship_Target();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.strutsLinkRelationImpl <em>struts Link Relation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.strutsLinkRelationImpl
+		 * @see components.impl.ComponentsPackageImpl#getstrutsLinkRelation()
+		 * @generated
+		 */
+		EClass STRUTS_LINK_RELATION = eINSTANCE.getstrutsLinkRelation();
+
+		/**
+		 * The meta object literal for the '<em><b>Source</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUTS_LINK_RELATION__SOURCE = eINSTANCE.getstrutsLinkRelation_Source();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUTS_LINK_RELATION__TARGET = eINSTANCE.getstrutsLinkRelation_Target();
+
+		/**
+		 * The meta object literal for the '{@link components.impl.WebContainerRelationsImpl <em>Web Container Relations</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see components.impl.WebContainerRelationsImpl
+		 * @see components.impl.ComponentsPackageImpl#getWebContainerRelations()
+		 * @generated
+		 */
+		EClass WEB_CONTAINER_RELATIONS = eINSTANCE.getWebContainerRelations();
 
 		/**
 		 * The meta object literal for the '{@link components.VisibilityKind <em>Visibility Kind</em>}' enum.

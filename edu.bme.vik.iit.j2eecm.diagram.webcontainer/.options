@@ -1,0 +1,7 @@
+# Tracing options for the edu.bme.vik.iit.j2eecm.diagram.webcontainer plug-in
+
+# Common issues
+edu.bme.vik.iit.j2eecm.diagram.webcontainer/debug=false
+
+# Visual IDs
+edu.bme.vik.iit.j2eecm.diagram.webcontainer/debug/visualID=false

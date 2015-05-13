@@ -5,8 +5,6 @@ package components.tests;
 import components.ComponentsFactory;
 import components.webModelRelationship;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class webModelRelationshipTest extends TestCase {
-
-	/**
-	 * The fixture for this web Model Relationship test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected webModelRelationship fixture = null;
+public class webModelRelationshipTest extends WebContainerRelationsTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +35,14 @@ public class webModelRelationshipTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this web Model Relationship test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(webModelRelationship fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this web Model Relationship test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected webModelRelationship getFixture() {
-		return fixture;
+		return (webModelRelationship)fixture;
 	}
 
 	/**

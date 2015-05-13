@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link components.EJBContainer#getClassifiers <em>Classifiers</em>}</li>
  *   <li>{@link components.EJBContainer#getRelizationRelationship <em>Relization Relationship</em>}</li>
  *   <li>{@link components.EJBContainer#getAssociations <em>Associations</em>}</li>
+ *   <li>{@link components.EJBContainer#getEnums <em>Enums</em>}</li>
  * </ul>
  * </p>
  *
@@ -133,5 +134,21 @@ public interface EJBContainer extends EObject {
 	 * @generated
 	 */
 	EList<Association> getAssociations();
+
+	/**
+	 * Returns the value of the '<em><b>Enums</b></em>' containment reference list.
+	 * The list contents are of type {@link components.EnumElement}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Enums</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Enums</em>' containment reference list.
+	 * @see components.ComponentsPackage#getEJBContainer_Enums()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<EnumElement> getEnums();
 
 } // EJBContainer

@@ -4,13 +4,13 @@
 
    <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
       <?gmfgen generated="true"?>
-      <fileTypes type="text" extension="components_diagram"/>
+      <fileTypes type="text" extension="jcm"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
       <?gmfgen generated="true"?>
       <parser
-         type="components_diagram"
+         type="jcm"
          class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
       </parser>
    </extension>
@@ -21,11 +21,11 @@
          id="components.diagram.part.EJBContainerDiagramEditorID"
          name="%editorName"
          icon="icons/obj16/ComponentsDiagramFile.gif"
-         extensions="components_diagram"
+         extensions="jcm"
          default="true"
-         class="components.diagram.part.ModelDiagramEditor"
-         matchingStrategy="components.diagram.part.ModelMatchingStrategy"
-         contributorClass="components.diagram.part.ModelDiagramActionBarContributor">
+         class="ejb.container.diagram.part.ModelDiagramEditor"
+         matchingStrategy="ejb.container.diagram.part.ModelMatchingStrategy"
+         contributorClass="ejb.container.diagram.part.ModelDiagramActionBarContributor">
       </editor>
    </extension>
    
@@ -33,7 +33,7 @@
       <?gmfgen generated="true"?>
       <context
          description="%context.description"
-         id="components.diagram.ui.diagramContext"
+         id="ejb.container.diagram.ui.diagramContext"
          name="%context.name"
          parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
       </context>
@@ -45,8 +45,8 @@
   	     name="%newWizardName"
   	     icon="icons/obj16/ComponentsDiagramFile.gif"
   	     category="org.eclipse.ui.Examples"
-  	     class="components.diagram.part.ModelCreationWizard"
-  	     id="components.diagram.part.ModelCreationWizardID">
+  	     class="ejb.container.diagram.part.ModelCreationWizard"
+  	     id="ejb.container.diagram.part.ModelCreationWizardID">
   	  	 <description>%newWizardDesc</description>  
       </wizard>
    </extension>
@@ -55,11 +55,11 @@
       <?gmfgen generated="true"?>
       <objectContribution
             id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.InitDiagram"
-            nameFilter="*.components"
+            nameFilter="*.ejbcontainer"
             objectClass="org.eclipse.core.resources.IFile">
          <action
                label="%initDiagramActionLabel"
-               class="components.diagram.part.ModelInitDiagramFileAction"
+               class="ejb.container.diagram.part.ModelInitDiagramFileAction"
                menubarPath="additions"
                enablesFor="1"
                id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.InitDiagramAction">
@@ -113,7 +113,7 @@
 
    <extension point="org.eclipse.core.runtime.preferences" id="prefs">
       <?gmfgen generated="true"?>
-      <initializer class="components.diagram.preferences.DiagramPreferenceInitializer"/>
+      <initializer class="ejb.container.diagram.preferences.DiagramPreferenceInitializer"/>
    </extension>
 
    <extension point="org.eclipse.ui.preferencePages" id="prefpages">
@@ -121,31 +121,31 @@
       <page
             id="edu.bme.vik.iit.j2eecm.diagram.general"
             name="%prefpage.edu.bme.vik.iit.j2eecm.diagram.general"
-            class="components.diagram.preferences.DiagramGeneralPreferencePage">
+            class="ejb.container.diagram.preferences.DiagramGeneralPreferencePage">
       </page>
       <page
             id="edu.bme.vik.iit.j2eecm.diagram.appearance"
             name="%prefpage.edu.bme.vik.iit.j2eecm.diagram.appearance"
             category="edu.bme.vik.iit.j2eecm.diagram.general"
-            class="components.diagram.preferences.DiagramAppearancePreferencePage">
+            class="ejb.container.diagram.preferences.DiagramAppearancePreferencePage">
       </page>
       <page
             id="edu.bme.vik.iit.j2eecm.diagram.connections"
             name="%prefpage.edu.bme.vik.iit.j2eecm.diagram.connections"
             category="edu.bme.vik.iit.j2eecm.diagram.general"
-            class="components.diagram.preferences.DiagramConnectionsPreferencePage">
+            class="ejb.container.diagram.preferences.DiagramConnectionsPreferencePage">
       </page>
       <page
             id="edu.bme.vik.iit.j2eecm.diagram.printing"
             name="%prefpage.edu.bme.vik.iit.j2eecm.diagram.printing"
             category="edu.bme.vik.iit.j2eecm.diagram.general"
-            class="components.diagram.preferences.DiagramPrintingPreferencePage">
+            class="ejb.container.diagram.preferences.DiagramPrintingPreferencePage">
       </page>
       <page
             id="edu.bme.vik.iit.j2eecm.diagram.rulersAndGrid"
             name="%prefpage.edu.bme.vik.iit.j2eecm.diagram.rulersAndGrid"
             category="edu.bme.vik.iit.j2eecm.diagram.general"
-            class="components.diagram.preferences.DiagramRulersAndGridPreferencePage">
+            class="ejb.container.diagram.preferences.DiagramRulersAndGridPreferencePage">
       </page>
    </extension>
 
@@ -153,7 +153,7 @@
       <?gmfgen generated="true"?>
       <propertyContributor
             contributorId="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer"
-            labelProvider="components.diagram.sheet.ModelSheetLabelProvider">
+            labelProvider="ejb.container.diagram.sheet.ModelSheetLabelProvider">
          <propertyCategory category="domain"/>
          <propertyCategory category="visual"/>
          <propertyCategory category="extra"/>
@@ -204,42 +204,42 @@
          <propertySection
             id="property.section.domain" 
             tab="property.tab.domain"
-            class="components.diagram.sheet.ModelPropertySection">
+            class="ejb.container.diagram.sheet.ModelPropertySection">
             <input type="org.eclipse.gmf.runtime.notation.View"/>
             <input type="org.eclipse.gef.EditPart"/>
-            <input type="components.diagram.navigator.ModelAbstractNavigatorItem"/>
+            <input type="ejb.container.diagram.navigator.ModelAbstractNavigatorItem"/>
          </propertySection>
       </propertySections>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
       <?gmfgen generated="true"?>
-      <viewProvider class="components.diagram.providers.ModelViewProvider">
+      <viewProvider class="ejb.container.diagram.providers.ModelViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="EJBContainer"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2012,2002,2003,2006,2007,2009,2011,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3016,3014,3015,3017,3018"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2012,2002,2003,2006,2007,2009,2011,2013,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3016,3014,3015,3017,3018,3019"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004"/>
       </viewProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
       <?gmfgen generated="true"?>
-      <editpartProvider class="components.diagram.providers.ModelEditPartProvider">
+      <editpartProvider class="ejb.container.diagram.providers.ModelEditPartProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
             <method name="getType()" value="EJBContainer"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2012,2002,2003,2006,2007,2009,2011,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3016,3014,3015,3017,3018"/>
+            <method name="getType()" value="2012,2002,2003,2006,2007,2009,2011,2013,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3016,3014,3015,3017,3018,3019"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4002,4003,4004"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5012,5002,5020,5003,5023,5006,5026,5007,5029,5009,5011,5016,5017,5018,5019,5021,5022,5024,5025,5027,5028,5013,5030,5031,5014,5015"/>
+            <method name="getType()" value="5012,5002,5020,5003,5023,5006,5026,5007,5029,5009,5011,5033,5016,5017,5018,5019,5021,5022,5024,5025,5027,5028,5013,5030,5031,5014,5015,5032"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value="7005,7006,7007,7008,7009,7010,7011,7012,7003,7004,7013,7014,7015,7001,7002"/>
+            <method name="getType()" value="7005,7006,7007,7008,7009,7010,7011,7012,7003,7004,7013,7014,7015,7001,7002,7016"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -247,45 +247,47 @@
 
    <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
       <?gmfgen generated="true"?>
-      <modelingAssistantProvider class="components.diagram.providers.ModelModelingAssistantProvider">
+      <modelingAssistantProvider class="ejb.container.diagram.providers.ModelModelingAssistantProvider">
          <Priority name="Lowest"/>
-         <object class="components.diagram.edit.parts.EJBContainerEditPart" id="EJBContainer_1000"/>
-         <object class="components.diagram.edit.parts.InterfaceElementEditPart" id="InterfaceElement_2012"/>
-         <object class="components.diagram.edit.parts.EntityBeanEditPart" id="EntityBean_2002"/>
-         <object class="components.diagram.edit.parts.MessageDrivenBeanEditPart" id="MessageDrivenBean_2003"/>
-         <object class="components.diagram.edit.parts.StatefulSessionBeanEditPart" id="StatefulSessionBean_2006"/>
-         <object class="components.diagram.edit.parts.StatelessSessionBeanEditPart" id="StatelessSessionBean_2007"/>
-         <object class="components.diagram.edit.parts.PackageElementEditPart" id="PackageElement_2009"/>
-         <object class="components.diagram.edit.parts.ClassElementEditPart" id="ClassElement_2011"/>
-         <object class="components.diagram.edit.parts.Property2EditPart" id="Property_3003"/>
-         <object class="components.diagram.edit.parts.Operation2EditPart" id="Operation_3004"/>
-         <object class="components.diagram.edit.parts.Property3EditPart" id="Property_3005"/>
-         <object class="components.diagram.edit.parts.Operation3EditPart" id="Operation_3006"/>
-         <object class="components.diagram.edit.parts.Property4EditPart" id="Property_3007"/>
-         <object class="components.diagram.edit.parts.Operation4EditPart" id="Operation_3008"/>
-         <object class="components.diagram.edit.parts.Property5EditPart" id="Property_3009"/>
-         <object class="components.diagram.edit.parts.Operation5EditPart" id="Operation_3010"/>
-         <object class="components.diagram.edit.parts.Property6EditPart" id="Property_3011"/>
-         <object class="components.diagram.edit.parts.Operation6EditPart" id="Operation_3012"/>
-         <object class="components.diagram.edit.parts.ClassElement2EditPart" id="ClassElement_3016"/>
-         <object class="components.diagram.edit.parts.Property7EditPart" id="Property_3014"/>
-         <object class="components.diagram.edit.parts.Operation7EditPart" id="Operation_3015"/>
-         <object class="components.diagram.edit.parts.Property8EditPart" id="Property_3017"/>
-         <object class="components.diagram.edit.parts.Operation8EditPart" id="Operation_3018"/>
-         <context elements="EJBContainer_1000,InterfaceElement_2012,EntityBean_2002,MessageDrivenBean_2003,StatefulSessionBean_2006,StatelessSessionBean_2007,PackageElement_2009,ClassElement_2011,Property_3003,Operation_3004,Property_3005,Operation_3006,Property_3007,Operation_3008,Property_3009,Operation_3010,Property_3011,Operation_3012,ClassElement_3016,Property_3014,Operation_3015,Property_3017,Operation_3018"/>
+         <object class="ejb.container.diagram.edit.parts.EJBContainerEditPart" id="EJBContainer_1000"/>
+         <object class="ejb.container.diagram.edit.parts.InterfaceElementEditPart" id="InterfaceElement_2012"/>
+         <object class="ejb.container.diagram.edit.parts.EntityBeanEditPart" id="EntityBean_2002"/>
+         <object class="ejb.container.diagram.edit.parts.MessageDrivenBeanEditPart" id="MessageDrivenBean_2003"/>
+         <object class="ejb.container.diagram.edit.parts.StatefulSessionBeanEditPart" id="StatefulSessionBean_2006"/>
+         <object class="ejb.container.diagram.edit.parts.StatelessSessionBeanEditPart" id="StatelessSessionBean_2007"/>
+         <object class="ejb.container.diagram.edit.parts.PackageElementEditPart" id="PackageElement_2009"/>
+         <object class="ejb.container.diagram.edit.parts.ClassElementEditPart" id="ClassElement_2011"/>
+         <object class="ejb.container.diagram.edit.parts.EnumElementEditPart" id="EnumElement_2013"/>
+         <object class="ejb.container.diagram.edit.parts.Property2EditPart" id="Property_3003"/>
+         <object class="ejb.container.diagram.edit.parts.Operation2EditPart" id="Operation_3004"/>
+         <object class="ejb.container.diagram.edit.parts.Property3EditPart" id="Property_3005"/>
+         <object class="ejb.container.diagram.edit.parts.Operation3EditPart" id="Operation_3006"/>
+         <object class="ejb.container.diagram.edit.parts.Property4EditPart" id="Property_3007"/>
+         <object class="ejb.container.diagram.edit.parts.Operation4EditPart" id="Operation_3008"/>
+         <object class="ejb.container.diagram.edit.parts.Property5EditPart" id="Property_3009"/>
+         <object class="ejb.container.diagram.edit.parts.Operation5EditPart" id="Operation_3010"/>
+         <object class="ejb.container.diagram.edit.parts.Property6EditPart" id="Property_3011"/>
+         <object class="ejb.container.diagram.edit.parts.Operation6EditPart" id="Operation_3012"/>
+         <object class="ejb.container.diagram.edit.parts.ClassElement2EditPart" id="ClassElement_3016"/>
+         <object class="ejb.container.diagram.edit.parts.Property7EditPart" id="Property_3014"/>
+         <object class="ejb.container.diagram.edit.parts.Operation7EditPart" id="Operation_3015"/>
+         <object class="ejb.container.diagram.edit.parts.Property8EditPart" id="Property_3017"/>
+         <object class="ejb.container.diagram.edit.parts.Operation8EditPart" id="Operation_3018"/>
+         <object class="ejb.container.diagram.edit.parts.EnumLiteralEditPart" id="EnumLiteral_3019"/>
+         <context elements="EJBContainer_1000,InterfaceElement_2012,EntityBean_2002,MessageDrivenBean_2003,StatefulSessionBean_2006,StatelessSessionBean_2007,PackageElement_2009,ClassElement_2011,EnumElement_2013,Property_3003,Operation_3004,Property_3005,Operation_3006,Property_3007,Operation_3008,Property_3009,Operation_3010,Property_3011,Operation_3012,ClassElement_3016,Property_3014,Operation_3015,Property_3017,Operation_3018,EnumLiteral_3019"/>
       </modelingAssistantProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
       <?gmfgen generated="true"?>
-      <IconProvider class="components.diagram.providers.ModelIconProvider">
+      <IconProvider class="ejb.container.diagram.providers.ModelIconProvider">
          <Priority name="Low"/>
       </IconProvider>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
       <?gmfgen generated="true"?>
-      <ParserProvider class="components.diagram.providers.ModelParserProvider">
+      <ParserProvider class="ejb.container.diagram.providers.ModelParserProvider">
          <Priority name="Lowest"/>
       </ParserProvider>
    </extension>
@@ -298,7 +300,7 @@
                name="%metatype.name.EJBContainer_1000"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="EJBContainer"
-               edithelper="components.diagram.edit.helpers.EJBContainerEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.EJBContainerEditHelper">
             <param name="semanticHint" value="1000"/>
          </metamodelType>
       </metamodel>
@@ -308,7 +310,7 @@
                name="%metatype.name.InterfaceElement_2012"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="InterfaceElement"
-               edithelper="components.diagram.edit.helpers.InterfaceElementEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.InterfaceElementEditHelper">
             <param name="semanticHint" value="2012"/>
          </metamodelType>
       </metamodel>
@@ -318,7 +320,7 @@
                name="%metatype.name.EntityBean_2002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="EntityBean"
-               edithelper="components.diagram.edit.helpers.EntityBeanEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.EntityBeanEditHelper">
             <param name="semanticHint" value="2002"/>
          </metamodelType>
       </metamodel>
@@ -328,7 +330,7 @@
                name="%metatype.name.MessageDrivenBean_2003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="MessageDrivenBean"
-               edithelper="components.diagram.edit.helpers.MessageDrivenBeanEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.MessageDrivenBeanEditHelper">
             <param name="semanticHint" value="2003"/>
          </metamodelType>
       </metamodel>
@@ -338,7 +340,7 @@
                name="%metatype.name.StatefulSessionBean_2006"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="StatefulSessionBean"
-               edithelper="components.diagram.edit.helpers.StatefulSessionBeanEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.StatefulSessionBeanEditHelper">
             <param name="semanticHint" value="2006"/>
          </metamodelType>
       </metamodel>
@@ -348,7 +350,7 @@
                name="%metatype.name.StatelessSessionBean_2007"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="StatelessSessionBean"
-               edithelper="components.diagram.edit.helpers.StatelessSessionBeanEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.StatelessSessionBeanEditHelper">
             <param name="semanticHint" value="2007"/>
          </metamodelType>
       </metamodel>
@@ -358,7 +360,7 @@
                name="%metatype.name.PackageElement_2009"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="PackageElement"
-               edithelper="components.diagram.edit.helpers.PackageElementEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.PackageElementEditHelper">
             <param name="semanticHint" value="2009"/>
          </metamodelType>
       </metamodel>
@@ -373,11 +375,21 @@
       </metamodel>
       <metamodel nsURI="components">
          <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.EnumElement_2013"
+               name="%metatype.name.EnumElement_2013"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EnumElement"
+               edithelper="ejb.container.diagram.edit.helpers.EnumElementEditHelper">
+            <param name="semanticHint" value="2013"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
                id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.Property_3003"
                name="%metatype.name.Property_3003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Property"
-               edithelper="components.diagram.edit.helpers.PropertyEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.PropertyEditHelper">
             <param name="semanticHint" value="3003"/>
          </metamodelType>
       </metamodel>
@@ -387,7 +399,7 @@
                name="%metatype.name.Operation_3004"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Operation"
-               edithelper="components.diagram.edit.helpers.OperationEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.OperationEditHelper">
             <param name="semanticHint" value="3004"/>
          </metamodelType>
       </metamodel>
@@ -469,7 +481,7 @@
                name="%metatype.name.ClassElement_3016"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="ClassElement"
-               edithelper="components.diagram.edit.helpers.ClassElementEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.ClassElementEditHelper">
             <param name="semanticHint" value="3016"/>
          </metamodelType>
       </metamodel>
@@ -511,11 +523,21 @@
       </metamodel>
       <metamodel nsURI="components">
          <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.EnumLiteral_3019"
+               name="%metatype.name.EnumLiteral_3019"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EnumLiteral"
+               edithelper="ejb.container.diagram.edit.helpers.EnumLiteralEditHelper">
+            <param name="semanticHint" value="3019"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
                id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.Realization_4001"
                name="%metatype.name.Realization_4001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Realization"
-               edithelper="components.diagram.edit.helpers.RealizationEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.RealizationEditHelper">
             <param name="semanticHint" value="4001"/>
          </metamodelType>
       </metamodel>
@@ -525,7 +547,7 @@
                name="%metatype.name.Generalization_4002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Generalization"
-               edithelper="components.diagram.edit.helpers.GeneralizationEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.GeneralizationEditHelper">
             <param name="semanticHint" value="4002"/>
          </metamodelType>
       </metamodel>
@@ -535,7 +557,7 @@
                name="%metatype.name.Aggregation_4003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Aggregation"
-               edithelper="components.diagram.edit.helpers.AggregationEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.AggregationEditHelper">
             <param name="semanticHint" value="4003"/>
          </metamodelType>
       </metamodel>
@@ -545,7 +567,7 @@
                name="%metatype.name.Association_4004"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Association"
-               edithelper="components.diagram.edit.helpers.AssociationEditHelper">
+               edithelper="ejb.container.diagram.edit.helpers.AssociationEditHelper">
             <param name="semanticHint" value="4004"/>
          </metamodelType>
       </metamodel>
@@ -569,6 +591,7 @@
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.StatelessSessionBean_2007"/>
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.PackageElement_2009"/>
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.ClassElement_2011"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.EnumElement_2013"/>
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.Property_3003"/>
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.Operation_3004"/>
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.Property_3005"/>
@@ -584,6 +607,7 @@
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.Operation_3015"/>
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.Property_3017"/>
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.Operation_3018"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.EnumLiteral_3019"/>
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.Realization_4001"/>
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.Generalization_4002"/>
          <elementType ref="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.Aggregation_4003"/>
@@ -598,7 +622,7 @@
            type="org.eclipse.emf.common.ui.URIEditorInput"
            namespace="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer"
            properties="isURIEditorInput"
-           class="components.diagram.part.ModelUriEditorInputTester">
+           class="ejb.container.diagram.part.ModelUriEditorInputTester">
        </propertyTester>
    </extension>
 
@@ -624,34 +648,34 @@
             id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.resourceContent" 
             name="%navigatorContentName" 
             priority="normal" 
-            contentProvider="components.diagram.navigator.ModelNavigatorContentProvider" 
-            labelProvider="components.diagram.navigator.ModelNavigatorLabelProvider"
+            contentProvider="ejb.container.diagram.navigator.ModelNavigatorContentProvider" 
+            labelProvider="ejb.container.diagram.navigator.ModelNavigatorLabelProvider"
             icon="icons/obj16/ComponentsDiagramFile.gif"
             activeByDefault="true">
          <triggerPoints>
             <or>
 	           <and>
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
-        	      <test property="org.eclipse.core.resources.extension" value="components_diagram"/>
+        	      <test property="org.eclipse.core.resources.extension" value="jcm"/>
                </and>
-               <instanceof value="components.diagram.navigator.ModelAbstractNavigatorItem"/>
+               <instanceof value="ejb.container.diagram.navigator.ModelAbstractNavigatorItem"/>
             </or>
          </triggerPoints>
          <possibleChildren>
             <or>
-         	   <instanceof value="components.diagram.navigator.ModelAbstractNavigatorItem"/>
+         	   <instanceof value="ejb.container.diagram.navigator.ModelAbstractNavigatorItem"/>
             </or>
          </possibleChildren>
          <commonSorter 
                id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.navigatorSorter" 
-               class="components.diagram.navigator.ModelNavigatorSorter">
+               class="ejb.container.diagram.navigator.ModelNavigatorSorter">
             <parentExpression>
                <or>
 	              <and>
     	             <instanceof value="org.eclipse.core.resources.IFile"/>
-        	         <test property="org.eclipse.core.resources.extension" value="components_diagram"/>
+        	         <test property="org.eclipse.core.resources.extension" value="jcm"/>
                   </and>
-                  <instanceof value="components.diagram.navigator.ModelAbstractNavigatorItem"/>
+                  <instanceof value="ejb.container.diagram.navigator.ModelAbstractNavigatorItem"/>
                </or>
             </parentExpression>
          </commonSorter>
@@ -660,29 +684,29 @@
             id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.domainResourceContent" 
             name="%domainNavigatorContentName" 
             priority="normal" 
-            contentProvider="components.diagram.navigator.ModelDomainNavigatorContentProvider" 
-            labelProvider="components.diagram.navigator.ModelDomainNavigatorLabelProvider"
+            contentProvider="ejb.container.diagram.navigator.ModelDomainNavigatorContentProvider" 
+            labelProvider="ejb.container.diagram.navigator.ModelDomainNavigatorLabelProvider"
             icon="icons/obj16/ComponentsDiagramFile.gif"
             activeByDefault="true">
          <triggerPoints>
             <or>
 	           <and>
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
-        	      <test property="org.eclipse.core.resources.extension" value="components"/>
+        	      <test property="org.eclipse.core.resources.extension" value="ejbcontainer"/>
                </and>
-               <instanceof value="components.diagram.navigator.ModelDomainNavigatorItem"/>
+               <instanceof value="ejb.container.diagram.navigator.ModelDomainNavigatorItem"/>
             </or>
          </triggerPoints>
          <possibleChildren>
-            <instanceof value="components.diagram.navigator.ModelDomainNavigatorItem"/>
+            <instanceof value="ejb.container.diagram.navigator.ModelDomainNavigatorItem"/>
          </possibleChildren>
       </navigatorContent>
       <actionProvider
             id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.navigatorActionProvider"
-            class="components.diagram.navigator.ModelNavigatorActionProvider">
+            class="ejb.container.diagram.navigator.ModelNavigatorActionProvider">
          <enablement>
             <or>
-               <instanceof value="components.diagram.navigator.ModelAbstractNavigatorItem"/>
+               <instanceof value="ejb.container.diagram.navigator.ModelAbstractNavigatorItem"/>
             </or>
          </enablement>
       </actionProvider>
@@ -692,7 +716,7 @@
       <?gmfgen generated="true"?>
       <linkHelper
             id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.navigatorLinkHelper"
-            class="components.diagram.navigator.ModelNavigatorLinkHelper">
+            class="ejb.container.diagram.navigator.ModelNavigatorLinkHelper">
          <editorInputEnablement>
             <and>
                <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
@@ -700,7 +724,7 @@
             </and>
          </editorInputEnablement>
          <selectionEnablement>
-            <instanceof value="components.diagram.navigator.ModelAbstractNavigatorItem"/>
+            <instanceof value="ejb.container.diagram.navigator.ModelAbstractNavigatorItem"/>
          </selectionEnablement>
       </linkHelper>
    </extension>
@@ -708,17 +732,17 @@
       <?gmfgen generated="true"?>
       <command
          categoryId="org.eclipse.ui.category.edit"
-         defaultHandler="components.diagram.part.ModelDiagramUpdateCommand"
+         defaultHandler="ejb.container.diagram.part.ModelDiagramUpdateCommand"
          description="%update.diagram.description"
-         id="components.diagram.updateDiagram"
+         id="ejb.container.diagram.updateDiagram"
          name="%update.diagram.name"/>
    </extension>
    
    <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
       <?gmfgen generated="true"?>
       <key 
-         commandId="components.diagram.updateDiagram"
-         contextId="components.diagram.ui.diagramContext"
+         commandId="ejb.container.diagram.updateDiagram"
+         contextId="ejb.container.diagram.ui.diagramContext"
          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
          sequence="F5"/>
    </extension>
@@ -735,7 +759,7 @@
                <and>
                   <with variable="activePartId"><equals value="components.diagram.part.EJBContainerDiagramEditorID"/></with>
                   <with variable="selection"><iterate ifEmpty="false"> 
-                     <instanceof value="components.diagram.edit.parts.EJBContainerEditPart"/>
+                     <instanceof value="ejb.container.diagram.edit.parts.EJBContainerEditPart"/>
                   </iterate></with>
                </and>
             </visibleWhen>
@@ -749,7 +773,7 @@
       <command id="edu.bme.vik.iit.j2eecm.diagram.ejbcontainer.LoadResourceAction"
          name="Load Resource"
          categoryId="components.diagram.part.EJBContainerDiagramEditorID"
-         defaultHandler="components.diagram.part.LoadResourceAction"/>
+         defaultHandler="ejb.container.diagram.part.LoadResourceAction"/>
    </extension>
 
    <extension point="org.eclipse.ui.handlers" id="menu-handlers">

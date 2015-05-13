@@ -212,6 +212,78 @@ public class ComponentsAdapterFactory extends AdapterFactoryImpl {
 				return createClassifierElementAdapter();
 			}
 			@Override
+			public Adapter caseStruts(Struts object) {
+				return createStrutsAdapter();
+			}
+			@Override
+			public Adapter caseStrutsGlobal(StrutsGlobal object) {
+				return createStrutsGlobalAdapter();
+			}
+			@Override
+			public Adapter caseAction(Action object) {
+				return createActionAdapter();
+			}
+			@Override
+			public Adapter caseActionRelationship(ActionRelationship object) {
+				return createActionRelationshipAdapter();
+			}
+			@Override
+			public Adapter caseStrutsRelation(StrutsRelation object) {
+				return createStrutsRelationAdapter();
+			}
+			@Override
+			public Adapter caseXMLConfig(XMLConfig object) {
+				return createXMLConfigAdapter();
+			}
+			@Override
+			public Adapter caseStrutsOperation(StrutsOperation object) {
+				return createStrutsOperationAdapter();
+			}
+			@Override
+			public Adapter caseExceptionHandling(ExceptionHandling object) {
+				return createExceptionHandlingAdapter();
+			}
+			@Override
+			public Adapter caseEventCall(EventCall object) {
+				return createEventCallAdapter();
+			}
+			@Override
+			public Adapter caseEnumElement(EnumElement object) {
+				return createEnumElementAdapter();
+			}
+			@Override
+			public Adapter caseEnumLiteral(EnumLiteral object) {
+				return createEnumLiteralAdapter();
+			}
+			@Override
+			public Adapter caseHTML5(HTML5 object) {
+				return createHTML5Adapter();
+			}
+			@Override
+			public Adapter caseStaticWebElement(StaticWebElement object) {
+				return createStaticWebElementAdapter();
+			}
+			@Override
+			public Adapter casestaticRelationship(staticRelationship object) {
+				return createstaticRelationshipAdapter();
+			}
+			@Override
+			public Adapter caseLinkElement(LinkElement object) {
+				return createLinkElementAdapter();
+			}
+			@Override
+			public Adapter caselinkRelationship(linkRelationship object) {
+				return createlinkRelationshipAdapter();
+			}
+			@Override
+			public Adapter casestrutsLinkRelation(strutsLinkRelation object) {
+				return createstrutsLinkRelationAdapter();
+			}
+			@Override
+			public Adapter caseWebContainerRelations(WebContainerRelations object) {
+				return createWebContainerRelationsAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -732,6 +804,258 @@ public class ComponentsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createClassifierElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.Struts <em>Struts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.Struts
+	 * @generated
+	 */
+	public Adapter createStrutsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.StrutsGlobal <em>Struts Global</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.StrutsGlobal
+	 * @generated
+	 */
+	public Adapter createStrutsGlobalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.Action <em>Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.Action
+	 * @generated
+	 */
+	public Adapter createActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.ActionRelationship <em>Action Relationship</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.ActionRelationship
+	 * @generated
+	 */
+	public Adapter createActionRelationshipAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.StrutsRelation <em>Struts Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.StrutsRelation
+	 * @generated
+	 */
+	public Adapter createStrutsRelationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.XMLConfig <em>XML Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.XMLConfig
+	 * @generated
+	 */
+	public Adapter createXMLConfigAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.StrutsOperation <em>Struts Operation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.StrutsOperation
+	 * @generated
+	 */
+	public Adapter createStrutsOperationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.ExceptionHandling <em>Exception Handling</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.ExceptionHandling
+	 * @generated
+	 */
+	public Adapter createExceptionHandlingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.EventCall <em>Event Call</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.EventCall
+	 * @generated
+	 */
+	public Adapter createEventCallAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.EnumElement <em>Enum Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.EnumElement
+	 * @generated
+	 */
+	public Adapter createEnumElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.EnumLiteral <em>Enum Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.EnumLiteral
+	 * @generated
+	 */
+	public Adapter createEnumLiteralAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.HTML5 <em>HTML5</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.HTML5
+	 * @generated
+	 */
+	public Adapter createHTML5Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.StaticWebElement <em>Static Web Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.StaticWebElement
+	 * @generated
+	 */
+	public Adapter createStaticWebElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.staticRelationship <em>static Relationship</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.staticRelationship
+	 * @generated
+	 */
+	public Adapter createstaticRelationshipAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.LinkElement <em>Link Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.LinkElement
+	 * @generated
+	 */
+	public Adapter createLinkElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.linkRelationship <em>link Relationship</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.linkRelationship
+	 * @generated
+	 */
+	public Adapter createlinkRelationshipAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.strutsLinkRelation <em>struts Link Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.strutsLinkRelation
+	 * @generated
+	 */
+	public Adapter createstrutsLinkRelationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link components.WebContainerRelations <em>Web Container Relations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see components.WebContainerRelations
+	 * @generated
+	 */
+	public Adapter createWebContainerRelationsAdapter() {
 		return null;
 	}
 

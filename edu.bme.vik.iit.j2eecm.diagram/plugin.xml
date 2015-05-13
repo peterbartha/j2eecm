@@ -4,13 +4,13 @@
 
    <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
       <?gmfgen generated="true"?>
-      <fileTypes type="text" extension="components_diagram"/>
+      <fileTypes type="text" extension="jcm"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
       <?gmfgen generated="true"?>
       <parser
-         type="components_diagram"
+         type="jcm"
          class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
       </parser>
    </extension>
@@ -21,7 +21,7 @@
          id="components.diagram.part.ModelDiagramEditorID"
          name="%editorName"
          icon="icons/obj16/ComponentsDiagramFile.gif"
-         extensions="components_diagram"
+         extensions="jcm"
          default="true"
          class="components.diagram.part.ModelDiagramEditor"
          matchingStrategy="components.diagram.part.ModelMatchingStrategy"
@@ -465,7 +465,7 @@
             <or>
 	           <and>
     	          <instanceof value="org.eclipse.core.resources.IFile"/>
-        	      <test property="org.eclipse.core.resources.extension" value="components_diagram"/>
+        	      <test property="org.eclipse.core.resources.extension" value="jcm"/>
                </and>
                <instanceof value="components.diagram.navigator.ModelAbstractNavigatorItem"/>
             </or>
@@ -482,7 +482,7 @@
                <or>
 	              <and>
     	             <instanceof value="org.eclipse.core.resources.IFile"/>
-        	         <test property="org.eclipse.core.resources.extension" value="components_diagram"/>
+        	         <test property="org.eclipse.core.resources.extension" value="jcm"/>
                   </and>
                   <instanceof value="components.diagram.navigator.ModelAbstractNavigatorItem"/>
                </or>

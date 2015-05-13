@@ -6,6 +6,7 @@ import components.Association;
 import components.Classifier;
 import components.ComponentsPackage;
 import components.EJBContainer;
+import components.EnumElement;
 import components.Generalization;
 import components.NamedElement;
 import components.Realization;
@@ -39,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link components.impl.EJBContainerImpl#getClassifiers <em>Classifiers</em>}</li>
  *   <li>{@link components.impl.EJBContainerImpl#getRelizationRelationship <em>Relization Relationship</em>}</li>
  *   <li>{@link components.impl.EJBContainerImpl#getAssociations <em>Associations</em>}</li>
+ *   <li>{@link components.impl.EJBContainerImpl#getEnums <em>Enums</em>}</li>
  * </ul>
  * </p>
  *
@@ -114,6 +116,16 @@ public class EJBContainerImpl extends MinimalEObjectImpl.Container implements EJ
 	 * @ordered
 	 */
 	protected EList<Association> associations;
+
+	/**
+	 * The cached value of the '{@link #getEnums() <em>Enums</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEnums()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EnumElement> enums;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -220,6 +232,18 @@ public class EJBContainerImpl extends MinimalEObjectImpl.Container implements EJ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<EnumElement> getEnums() {
+		if (enums == null) {
+			enums = new EObjectContainmentEList<EnumElement>(EnumElement.class, this, ComponentsPackage.EJB_CONTAINER__ENUMS);
+		}
+		return enums;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -233,6 +257,8 @@ public class EJBContainerImpl extends MinimalEObjectImpl.Container implements EJ
 				return ((InternalEList<?>)getRelizationRelationship()).basicRemove(otherEnd, msgs);
 			case ComponentsPackage.EJB_CONTAINER__ASSOCIATIONS:
 				return ((InternalEList<?>)getAssociations()).basicRemove(otherEnd, msgs);
+			case ComponentsPackage.EJB_CONTAINER__ENUMS:
+				return ((InternalEList<?>)getEnums()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -257,6 +283,8 @@ public class EJBContainerImpl extends MinimalEObjectImpl.Container implements EJ
 				return getRelizationRelationship();
 			case ComponentsPackage.EJB_CONTAINER__ASSOCIATIONS:
 				return getAssociations();
+			case ComponentsPackage.EJB_CONTAINER__ENUMS:
+				return getEnums();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -293,6 +321,10 @@ public class EJBContainerImpl extends MinimalEObjectImpl.Container implements EJ
 				getAssociations().clear();
 				getAssociations().addAll((Collection<? extends Association>)newValue);
 				return;
+			case ComponentsPackage.EJB_CONTAINER__ENUMS:
+				getEnums().clear();
+				getEnums().addAll((Collection<? extends EnumElement>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -323,6 +355,9 @@ public class EJBContainerImpl extends MinimalEObjectImpl.Container implements EJ
 			case ComponentsPackage.EJB_CONTAINER__ASSOCIATIONS:
 				getAssociations().clear();
 				return;
+			case ComponentsPackage.EJB_CONTAINER__ENUMS:
+				getEnums().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -347,6 +382,8 @@ public class EJBContainerImpl extends MinimalEObjectImpl.Container implements EJ
 				return relizationRelationship != null && !relizationRelationship.isEmpty();
 			case ComponentsPackage.EJB_CONTAINER__ASSOCIATIONS:
 				return associations != null && !associations.isEmpty();
+			case ComponentsPackage.EJB_CONTAINER__ENUMS:
+				return enums != null && !enums.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

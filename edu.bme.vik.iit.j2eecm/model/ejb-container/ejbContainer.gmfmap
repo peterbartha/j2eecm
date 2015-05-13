@@ -638,6 +638,52 @@
       </compartments>
     </ownedChild>
   </nodes>
+  <nodes>
+    <containmentFeature
+        href="../model.ecore#//EJBContainer/enums"/>
+    <ownedChild>
+      <domainMetaElement
+          href="../model.ecore#//EnumElement"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="ejbContainer.gmfgraph#EnumElementName"/>
+        <features
+            href="../model.ecore#//NamedElement/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="ejbContainer.gmftool#//@palette/@tools.0/@tools.3"/>
+      <diagramNode
+          href="ejbContainer.gmfgraph#EnumElement"/>
+      <children
+          compartment="//@nodes.7/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="../model.ecore#//EnumElement/literals"/>
+        <ownedChild>
+          <domainMetaElement
+              href="../model.ecore#//EnumLiteral"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="ejbContainer.gmfgraph#EnumLiteralName"/>
+            <features
+                href="../model.ecore#//EnumLiteral/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="ejbContainer.gmftool#//@palette/@tools.2/@tools.2"/>
+          <diagramNode
+              href="ejbContainer.gmfgraph#EnumLiteral"/>
+        </ownedChild>
+      </children>
+      <compartments
+          children="//@nodes.7/@ownedChild/@children.0">
+        <compartment
+            href="ejbContainer.gmfgraph#EnumLiteralCompartment"/>
+      </compartments>
+    </ownedChild>
+  </nodes>
   <links>
     <domainMetaElement
         href="../model.ecore#//Realization"/>

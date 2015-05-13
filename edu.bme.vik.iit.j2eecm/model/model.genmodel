@@ -53,6 +53,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//WebContainer/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//WebContainer/serverApp"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//WebContainer/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//WebContainer/struts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//WebContainer/staticElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//WebContainer/strutsActions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//WebContainer/webrelations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//WebContainer/linkElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//WebContainer/global"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//EJBContainer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//EJBContainer/name"/>
@@ -61,6 +67,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//EJBContainer/classifiers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//EJBContainer/relizationRelationship"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//EJBContainer/associations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//EJBContainer/enums"/>
     </genClasses>
     <genClasses image="false" ecoreClass="model.ecore#//EJB">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//EJB/viewType"/>
@@ -71,7 +78,9 @@
     <genClasses ecoreClass="model.ecore#//StatelessSessionBean"/>
     <genClasses ecoreClass="model.ecore#//StatefulSessionBean"/>
     <genClasses ecoreClass="model.ecore#//Servlet"/>
-    <genClasses ecoreClass="model.ecore#//JSPPage"/>
+    <genClasses ecoreClass="model.ecore#//JSPPage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//JSPPage/links"/>
+    </genClasses>
     <genClasses ecoreClass="model.ecore#//ContainerReleationship">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ContainerReleationship/ejbs"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ContainerReleationship/web"/>
@@ -145,5 +154,53 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//ClassifierElement/ownedOperation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//ClassifierElement/ownedProperty"/>
     </genClasses>
+    <genClasses ecoreClass="model.ecore#//Struts">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Struts/actions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Struts/name"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//StrutsGlobal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//StrutsGlobal/actions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Action/name"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//ActionRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ActionRelationship/actionElem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ActionRelationship/pageElem"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//StrutsRelation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//StrutsRelation/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//StrutsRelation/source"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//XMLConfig"/>
+    <genClasses ecoreClass="model.ecore#//StrutsOperation"/>
+    <genClasses ecoreClass="model.ecore#//ExceptionHandling"/>
+    <genClasses ecoreClass="model.ecore#//EventCall"/>
+    <genClasses ecoreClass="model.ecore#//EnumElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//EnumElement/literals"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//EnumLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//EnumLiteral/name"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//HTML5"/>
+    <genClasses image="false" ecoreClass="model.ecore#//StaticWebElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//StaticWebElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//staticRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//staticRelationship/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//staticRelationship/source"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//LinkElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//LinkElement/link"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//linkRelationship">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//linkRelationship/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//linkRelationship/target"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//strutsLinkRelation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//strutsLinkRelation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//strutsLinkRelation/target"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//WebContainerRelations"/>
   </genPackages>
 </genmodel:GenModel>

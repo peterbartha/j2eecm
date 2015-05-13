@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="jcm"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="jcm"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="components.diagram.part.WebContainerDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/ComponentsDiagramFile.gif"
+         extensions="jcm"
+         default="true"
+         class="web.container.diagram.part.ModelDiagramEditor"
+         matchingStrategy="web.container.diagram.part.ModelMatchingStrategy"
+         contributorClass="web.container.diagram.part.ModelDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="web.container.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/ComponentsDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="web.container.diagram.part.ModelCreationWizard"
+  	     id="web.container.diagram.part.ModelCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.InitDiagram"
+            nameFilter="*.webcontainer"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="web.container.diagram.part.ModelInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="WebContainerPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="components.diagram.part.WebContainerDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="WebContainerPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="components.diagram.part.WebContainerDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="WebContainerRender">
+         <Priority name="Lowest"/>
+         <ViewId id="components.diagram.part.WebContainerDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="web.container.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="edu.bme.vik.iit.j2eecm.diagram.general"
+            name="%prefpage.edu.bme.vik.iit.j2eecm.diagram.general"
+            class="web.container.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="edu.bme.vik.iit.j2eecm.diagram.appearance"
+            name="%prefpage.edu.bme.vik.iit.j2eecm.diagram.appearance"
+            category="edu.bme.vik.iit.j2eecm.diagram.general"
+            class="web.container.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="edu.bme.vik.iit.j2eecm.diagram.connections"
+            name="%prefpage.edu.bme.vik.iit.j2eecm.diagram.connections"
+            category="edu.bme.vik.iit.j2eecm.diagram.general"
+            class="web.container.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="edu.bme.vik.iit.j2eecm.diagram.printing"
+            name="%prefpage.edu.bme.vik.iit.j2eecm.diagram.printing"
+            category="edu.bme.vik.iit.j2eecm.diagram.general"
+            class="web.container.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="edu.bme.vik.iit.j2eecm.diagram.rulersAndGrid"
+            name="%prefpage.edu.bme.vik.iit.j2eecm.diagram.rulersAndGrid"
+            category="edu.bme.vik.iit.j2eecm.diagram.general"
+            class="web.container.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="edu.bme.vik.iit.j2eecm.diagram.webcontainer"
+            labelProvider="web.container.diagram.sheet.ModelSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="edu.bme.vik.iit.j2eecm.diagram.webcontainer">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="edu.bme.vik.iit.j2eecm.diagram.webcontainer">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="web.container.diagram.sheet.ModelPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="web.container.diagram.navigator.ModelAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="web.container.diagram.providers.ModelViewProvider">
+         <Priority name="Lowest"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="WebContainer"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2006,2011,2014,3002,3001,3004,3007,3009"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005,4006"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="web.container.diagram.providers.ModelEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="WebContainer"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2003,2006,2011,2014,3002,3001,3004,3007,3009"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002,4003,4004,4005,4006"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5001,5002,5007,5008,5004,5006,5005,5010,5013,5015"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7002,7001,7003,7007,7009"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="web.container.diagram.providers.ModelModelingAssistantProvider">
+         <Priority name="Lowest"/>
+         <object class="web.container.diagram.edit.parts.WebContainerEditPart" id="WebContainer_1000"/>
+         <object class="web.container.diagram.edit.parts.JSPPageEditPart" id="JSPPage_2001"/>
+         <object class="web.container.diagram.edit.parts.ServletEditPart" id="Servlet_2002"/>
+         <object class="web.container.diagram.edit.parts.HTML5EditPart" id="HTML5_2003"/>
+         <object class="web.container.diagram.edit.parts.XMLConfigEditPart" id="XMLConfig_2006"/>
+         <object class="web.container.diagram.edit.parts.StrutsEditPart" id="Struts_2011"/>
+         <object class="web.container.diagram.edit.parts.StrutsGlobalEditPart" id="StrutsGlobal_2014"/>
+         <object class="web.container.diagram.edit.parts.LinkElementEditPart" id="LinkElement_3002"/>
+         <object class="web.container.diagram.edit.parts.StrutsOperationEditPart" id="StrutsOperation_3001"/>
+         <object class="web.container.diagram.edit.parts.EventCallEditPart" id="EventCall_3004"/>
+         <object class="web.container.diagram.edit.parts.ExceptionHandlingEditPart" id="ExceptionHandling_3007"/>
+         <object class="web.container.diagram.edit.parts.EventCall2EditPart" id="EventCall_3009"/>
+         <context elements="WebContainer_1000,JSPPage_2001,Servlet_2002,HTML5_2003,XMLConfig_2006,Struts_2011,StrutsGlobal_2014,LinkElement_3002,StrutsOperation_3001,EventCall_3004,ExceptionHandling_3007,EventCall_3009"/>
+      </modelingAssistantProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="web.container.diagram.providers.ModelIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="web.container.diagram.providers.ModelParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.WebContainer_1000"
+               name="%metatype.name.WebContainer_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="WebContainer"
+               edithelper="web.container.diagram.edit.helpers.WebContainerEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.JSPPage_2001"
+               name="%metatype.name.JSPPage_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="JSPPage"
+               edithelper="web.container.diagram.edit.helpers.JSPPageEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.Servlet_2002"
+               name="%metatype.name.Servlet_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Servlet"
+               edithelper="web.container.diagram.edit.helpers.ServletEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.HTML5_2003"
+               name="%metatype.name.HTML5_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="HTML5"
+               edithelper="web.container.diagram.edit.helpers.HTML5EditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.XMLConfig_2006"
+               name="%metatype.name.XMLConfig_2006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="XMLConfig"
+               edithelper="web.container.diagram.edit.helpers.XMLConfigEditHelper">
+            <param name="semanticHint" value="2006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.Struts_2011"
+               name="%metatype.name.Struts_2011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Struts"
+               edithelper="web.container.diagram.edit.helpers.StrutsEditHelper">
+            <param name="semanticHint" value="2011"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.StrutsGlobal_2014"
+               name="%metatype.name.StrutsGlobal_2014"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="StrutsGlobal"
+               edithelper="web.container.diagram.edit.helpers.StrutsGlobalEditHelper">
+            <param name="semanticHint" value="2014"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.LinkElement_3002"
+               name="%metatype.name.LinkElement_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="LinkElement"
+               edithelper="web.container.diagram.edit.helpers.LinkElementEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.StrutsOperation_3001"
+               name="%metatype.name.StrutsOperation_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="StrutsOperation"
+               edithelper="web.container.diagram.edit.helpers.StrutsOperationEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.EventCall_3004"
+               name="%metatype.name.EventCall_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="EventCall"
+               edithelper="web.container.diagram.edit.helpers.EventCallEditHelper">
+            <param name="semanticHint" value="3004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.ExceptionHandling_3007"
+               name="%metatype.name.ExceptionHandling_3007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ExceptionHandling"
+               edithelper="web.container.diagram.edit.helpers.ExceptionHandlingEditHelper">
+            <param name="semanticHint" value="3007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <specializationType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.EventCall_3009"
+               name="%metatype.name.EventCall_3009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.EventCall_3004"/>
+            <param name="semanticHint" value="3009"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.StaticRelationship_4001"
+               name="%metatype.name.StaticRelationship_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="staticRelationship"
+               edithelper="web.container.diagram.edit.helpers.StaticRelationshipEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.ActionRelationship_4002"
+               name="%metatype.name.ActionRelationship_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="ActionRelationship"
+               edithelper="web.container.diagram.edit.helpers.ActionRelationshipEditHelper">
+            <param name="semanticHint" value="4002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.LinkRelationship_4003"
+               name="%metatype.name.LinkRelationship_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="linkRelationship"
+               edithelper="web.container.diagram.edit.helpers.LinkRelationshipEditHelper">
+            <param name="semanticHint" value="4003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.StrutsLinkRelation_4004"
+               name="%metatype.name.StrutsLinkRelation_4004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="strutsLinkRelation"
+               edithelper="web.container.diagram.edit.helpers.StrutsLinkRelationEditHelper">
+            <param name="semanticHint" value="4004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.StrutsRelation_4005"
+               name="%metatype.name.StrutsRelation_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="StrutsRelation"
+               edithelper="web.container.diagram.edit.helpers.StrutsRelationEditHelper">
+            <param name="semanticHint" value="4005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="components">
+         <metamodelType
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.WebModelRelationship_4006"
+               name="%metatype.name.WebModelRelationship_4006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="webModelRelationship"
+               edithelper="web.container.diagram.edit.helpers.WebModelRelationshipEditHelper">
+            <param name="semanticHint" value="4006"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="edu.bme.vik.iit.j2eecm.diagram.webcontainer.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="edu.bme.vik.iit.j2eecm.diagram.webcontainer.TypeContext">
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.WebContainer_1000"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.JSPPage_2001"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.Servlet_2002"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.HTML5_2003"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.XMLConfig_2006"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.Struts_2011"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.StrutsGlobal_2014"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.LinkElement_3002"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.StrutsOperation_3001"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.EventCall_3004"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.ExceptionHandling_3007"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.EventCall_3009"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.StaticRelationship_4001"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.ActionRelationship_4002"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.LinkRelationship_4003"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.StrutsLinkRelation_4004"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.StrutsRelation_4005"/>
+         <elementType ref="edu.bme.vik.iit.j2eecm.diagram.webcontainer.WebModelRelationship_4006"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="edu.bme.vik.iit.j2eecm.diagram.webcontainer"
+           properties="isURIEditorInput"
+           class="web.container.diagram.part.ModelUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="edu.bme.vik.iit.j2eecm.diagram.webcontainer.resourceContent"/>
+			<contentExtension pattern="edu.bme.vik.iit.j2eecm.diagram.webcontainer.domainResourceContent"/>
+            <contentExtension pattern="edu.bme.vik.iit.j2eecm.diagram.webcontainer.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="edu.bme.vik.iit.j2eecm.diagram.webcontainer.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="web.container.diagram.navigator.ModelNavigatorContentProvider" 
+            labelProvider="web.container.diagram.navigator.ModelNavigatorLabelProvider"
+            icon="icons/obj16/ComponentsDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="jcm"/>
+               </and>
+               <instanceof value="web.container.diagram.navigator.ModelAbstractNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="web.container.diagram.navigator.ModelAbstractNavigatorItem"/>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.navigatorSorter" 
+               class="web.container.diagram.navigator.ModelNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="jcm"/>
+                  </and>
+                  <instanceof value="web.container.diagram.navigator.ModelAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="web.container.diagram.navigator.ModelDomainNavigatorContentProvider" 
+            labelProvider="web.container.diagram.navigator.ModelDomainNavigatorLabelProvider"
+            icon="icons/obj16/ComponentsDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="webcontainer"/>
+               </and>
+               <instanceof value="web.container.diagram.navigator.ModelDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="web.container.diagram.navigator.ModelDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.navigatorActionProvider"
+            class="web.container.diagram.navigator.ModelNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="web.container.diagram.navigator.ModelAbstractNavigatorItem"/>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.navigatorLinkHelper"
+            class="web.container.diagram.navigator.ModelNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="edu.bme.vik.iit.j2eecm.diagram.webcontainer.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="web.container.diagram.navigator.ModelAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="web.container.diagram.part.ModelDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="web.container.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="web.container.diagram.updateDiagram"
+         contextId="web.container.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="edu.bme.vik.iit.j2eecm.diagram.webcontainer.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="components.diagram.part.WebContainerDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="web.container.diagram.edit.parts.WebContainerEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="components.diagram.part.WebContainerDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="edu.bme.vik.iit.j2eecm.diagram.webcontainer.LoadResourceAction"
+         name="Load Resource"
+         categoryId="components.diagram.part.WebContainerDiagramEditorID"
+         defaultHandler="web.container.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>
